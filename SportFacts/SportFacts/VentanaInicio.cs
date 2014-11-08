@@ -81,5 +81,29 @@ namespace SportFacts
             panelInicio.Visible = false;
             panelAgregarUsuario.Visible = true;
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCrearIngesta_Click(object sender, EventArgs e)
+        {
+            Ingesta i = new Ingesta();
+            Alimento a = new Alimento() { Nombre = txtAlimento.Text, ValorCalorico = double.Parse(txtValorCalorico.Text) };
+            i.Alimentos.Add(new Tuple<Alimento,int>(a, int.Parse(txtCantidad.Text)));
+            ManejadorIngestas.AgregarIngesta(i);
+        }
+
+        private void btnAgregarAIngesta_Click(object sender, EventArgs e)
+        {
+            if (lbxIngestas.SelectedItem != null)
+            {
+                Ingesta i = (Ingesta)lbxIngestas.SelectedItem;
+                Alimento a = new Alimento() { Nombre = txtAlimento.Text, ValorCalorico = double.Parse(txtValorCalorico.Text) };
+                i.Alimentos.Add(new Tuple<Alimento, int>(a, int.Parse(txtCantidad.Text)));
+            
+            }
+        }
     }
 }
