@@ -56,22 +56,18 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.panelAgregarPlan = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAgregarPlan = new System.Windows.Forms.Button();
+            this.txtIMCMax = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.txtIMCMin = new System.Windows.Forms.TextBox();
+            this.txtEdadMax = new System.Windows.Forms.TextBox();
+            this.txtEdadMin = new System.Windows.Forms.TextBox();
+            this.txtObjetivo = new System.Windows.Forms.TextBox();
             this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.ckbGenerico = new System.Windows.Forms.CheckBox();
@@ -86,6 +82,21 @@
             this.btnCrearIngesta = new System.Windows.Forms.Button();
             this.cbxDia = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.cbxDuracion = new System.Windows.Forms.CheckBox();
+            this.etqFechaInicio = new System.Windows.Forms.Label();
+            this.etqFechaFin = new System.Windows.Forms.Label();
+            this.etqMeses = new System.Windows.Forms.Label();
+            this.txtDias = new System.Windows.Forms.TextBox();
+            this.txtSemanas = new System.Windows.Forms.TextBox();
+            this.txtMeses = new System.Windows.Forms.TextBox();
+            this.btnConfirmarIngesta = new System.Windows.Forms.Button();
+            this.btnCrearPlan = new System.Windows.Forms.Button();
+            this.etqMomento = new System.Windows.Forms.Label();
+            this.cbxMomento = new System.Windows.Forms.ComboBox();
+            this.cbxFrecuencia = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtNombrePlan = new System.Windows.Forms.TextBox();
             this.panelInicio.SuspendLayout();
             this.panelAgregarUsuario.SuspendLayout();
             this.panelAgregarPlan.SuspendLayout();
@@ -365,6 +376,19 @@
             // 
             // panelAgregarPlan
             // 
+            this.panelAgregarPlan.Controls.Add(this.label11);
+            this.panelAgregarPlan.Controls.Add(this.txtNombrePlan);
+            this.panelAgregarPlan.Controls.Add(this.label10);
+            this.panelAgregarPlan.Controls.Add(this.cbxFrecuencia);
+            this.panelAgregarPlan.Controls.Add(this.etqMomento);
+            this.panelAgregarPlan.Controls.Add(this.cbxMomento);
+            this.panelAgregarPlan.Controls.Add(this.btnCrearPlan);
+            this.panelAgregarPlan.Controls.Add(this.btnConfirmarIngesta);
+            this.panelAgregarPlan.Controls.Add(this.txtMeses);
+            this.panelAgregarPlan.Controls.Add(this.txtSemanas);
+            this.panelAgregarPlan.Controls.Add(this.txtDias);
+            this.panelAgregarPlan.Controls.Add(this.etqMeses);
+            this.panelAgregarPlan.Controls.Add(this.cbxDuracion);
             this.panelAgregarPlan.Controls.Add(this.label21);
             this.panelAgregarPlan.Controls.Add(this.cbxDia);
             this.panelAgregarPlan.Controls.Add(this.btnCrearIngesta);
@@ -379,75 +403,59 @@
             this.panelAgregarPlan.Controls.Add(this.ckbGenerico);
             this.panelAgregarPlan.Controls.Add(this.label17);
             this.panelAgregarPlan.Controls.Add(this.cbxCategoria);
-            this.panelAgregarPlan.Controls.Add(this.label11);
-            this.panelAgregarPlan.Controls.Add(this.dtpFechaInicio);
-            this.panelAgregarPlan.Controls.Add(this.button1);
-            this.panelAgregarPlan.Controls.Add(this.button2);
-            this.panelAgregarPlan.Controls.Add(this.label10);
-            this.panelAgregarPlan.Controls.Add(this.dtpFechaFin);
-            this.panelAgregarPlan.Controls.Add(this.textBox4);
+            this.panelAgregarPlan.Controls.Add(this.etqFechaInicio);
+            this.panelAgregarPlan.Controls.Add(this.btnCancelar);
+            this.panelAgregarPlan.Controls.Add(this.btnAgregarPlan);
+            this.panelAgregarPlan.Controls.Add(this.etqFechaFin);
+            this.panelAgregarPlan.Controls.Add(this.txtIMCMax);
             this.panelAgregarPlan.Controls.Add(this.label12);
             this.panelAgregarPlan.Controls.Add(this.label13);
             this.panelAgregarPlan.Controls.Add(this.label14);
             this.panelAgregarPlan.Controls.Add(this.label15);
             this.panelAgregarPlan.Controls.Add(this.label16);
-            this.panelAgregarPlan.Controls.Add(this.textBox5);
-            this.panelAgregarPlan.Controls.Add(this.textBox6);
-            this.panelAgregarPlan.Controls.Add(this.textBox7);
-            this.panelAgregarPlan.Controls.Add(this.textBox8);
+            this.panelAgregarPlan.Controls.Add(this.txtIMCMin);
+            this.panelAgregarPlan.Controls.Add(this.txtEdadMax);
+            this.panelAgregarPlan.Controls.Add(this.txtEdadMin);
+            this.panelAgregarPlan.Controls.Add(this.txtObjetivo);
             this.panelAgregarPlan.Location = new System.Drawing.Point(9, 149);
             this.panelAgregarPlan.Name = "panelAgregarPlan";
             this.panelAgregarPlan.Size = new System.Drawing.Size(614, 421);
             this.panelAgregarPlan.TabIndex = 2;
+            this.panelAgregarPlan.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAgregarPlan_Paint);
             // 
-            // button1
+            // btnCancelar
             // 
-            this.button1.Location = new System.Drawing.Point(105, 367);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.Location = new System.Drawing.Point(105, 367);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 33;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnAgregarPlan
             // 
-            this.button2.Location = new System.Drawing.Point(206, 367);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "Agregar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAgregarPlan.Enabled = false;
+            this.btnAgregarPlan.Location = new System.Drawing.Point(206, 367);
+            this.btnAgregarPlan.Name = "btnAgregarPlan";
+            this.btnAgregarPlan.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarPlan.TabIndex = 32;
+            this.btnAgregarPlan.Text = "Agregar";
+            this.btnAgregarPlan.UseVisualStyleBackColor = true;
+            this.btnAgregarPlan.Click += new System.EventHandler(this.btnAgregarPlan_Click);
             // 
-            // label10
+            // txtIMCMax
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(29, 277);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 13);
-            this.label10.TabIndex = 31;
-            this.label10.Text = "Fecha Fin";
-            // 
-            // dtpFechaFin
-            // 
-            this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaFin.Location = new System.Drawing.Point(159, 274);
-            this.dtpFechaFin.MaxDate = new System.DateTime(2014, 11, 8, 0, 0, 0, 0);
-            this.dtpFechaFin.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dtpFechaFin.Name = "dtpFechaFin";
-            this.dtpFechaFin.Size = new System.Drawing.Size(122, 20);
-            this.dtpFechaFin.TabIndex = 30;
-            this.dtpFechaFin.Value = new System.DateTime(2014, 11, 8, 0, 0, 0, 0);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(119, 222);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(162, 20);
-            this.textBox4.TabIndex = 28;
+            this.txtIMCMax.Enabled = false;
+            this.txtIMCMax.Location = new System.Drawing.Point(119, 222);
+            this.txtIMCMax.Name = "txtIMCMax";
+            this.txtIMCMax.Size = new System.Drawing.Size(162, 20);
+            this.txtIMCMax.TabIndex = 28;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.Enabled = false;
             this.label12.Location = new System.Drawing.Point(29, 222);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(65, 13);
@@ -457,6 +465,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.Enabled = false;
             this.label13.Location = new System.Drawing.Point(29, 196);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(62, 13);
@@ -466,6 +475,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.Enabled = false;
             this.label14.Location = new System.Drawing.Point(29, 173);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(71, 13);
@@ -475,6 +485,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.Enabled = false;
             this.label15.Location = new System.Drawing.Point(29, 147);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(68, 13);
@@ -484,62 +495,48 @@
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.Enabled = false;
             this.label16.Location = new System.Drawing.Point(29, 121);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(46, 13);
             this.label16.TabIndex = 22;
             this.label16.Text = "Objetivo";
             // 
-            // textBox5
+            // txtIMCMin
             // 
-            this.textBox5.Location = new System.Drawing.Point(119, 196);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(162, 20);
-            this.textBox5.TabIndex = 21;
+            this.txtIMCMin.Enabled = false;
+            this.txtIMCMin.Location = new System.Drawing.Point(119, 196);
+            this.txtIMCMin.Name = "txtIMCMin";
+            this.txtIMCMin.Size = new System.Drawing.Size(162, 20);
+            this.txtIMCMin.TabIndex = 21;
             // 
-            // textBox6
+            // txtEdadMax
             // 
-            this.textBox6.Location = new System.Drawing.Point(119, 170);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(162, 20);
-            this.textBox6.TabIndex = 20;
+            this.txtEdadMax.Enabled = false;
+            this.txtEdadMax.Location = new System.Drawing.Point(119, 170);
+            this.txtEdadMax.Name = "txtEdadMax";
+            this.txtEdadMax.Size = new System.Drawing.Size(162, 20);
+            this.txtEdadMax.TabIndex = 20;
             // 
-            // textBox7
+            // txtEdadMin
             // 
-            this.textBox7.Location = new System.Drawing.Point(119, 144);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(162, 20);
-            this.textBox7.TabIndex = 19;
+            this.txtEdadMin.Enabled = false;
+            this.txtEdadMin.Location = new System.Drawing.Point(119, 144);
+            this.txtEdadMin.Name = "txtEdadMin";
+            this.txtEdadMin.Size = new System.Drawing.Size(162, 20);
+            this.txtEdadMin.TabIndex = 19;
             // 
-            // textBox8
+            // txtObjetivo
             // 
-            this.textBox8.Location = new System.Drawing.Point(119, 118);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(162, 20);
-            this.textBox8.TabIndex = 18;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(29, 255);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 13);
-            this.label11.TabIndex = 38;
-            this.label11.Text = "Fecha Inicio";
-            // 
-            // dtpFechaInicio
-            // 
-            this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaInicio.Location = new System.Drawing.Point(159, 252);
-            this.dtpFechaInicio.MaxDate = new System.DateTime(2014, 11, 8, 0, 0, 0, 0);
-            this.dtpFechaInicio.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(122, 20);
-            this.dtpFechaInicio.TabIndex = 37;
-            this.dtpFechaInicio.Value = new System.DateTime(2014, 11, 8, 0, 0, 0, 0);
+            this.txtObjetivo.Enabled = false;
+            this.txtObjetivo.Location = new System.Drawing.Point(119, 118);
+            this.txtObjetivo.Name = "txtObjetivo";
+            this.txtObjetivo.Size = new System.Drawing.Size(162, 20);
+            this.txtObjetivo.TabIndex = 18;
             // 
             // cbxCategoria
             // 
+            this.cbxCategoria.Enabled = false;
             this.cbxCategoria.FormattingEnabled = true;
             this.cbxCategoria.Items.AddRange(new object[] {
             "Categoria1",
@@ -554,6 +551,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
+            this.label17.Enabled = false;
             this.label17.Location = new System.Drawing.Point(29, 303);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(52, 13);
@@ -565,6 +563,7 @@
             this.ckbGenerico.AutoSize = true;
             this.ckbGenerico.Checked = true;
             this.ckbGenerico.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckbGenerico.Enabled = false;
             this.ckbGenerico.Location = new System.Drawing.Point(206, 332);
             this.ckbGenerico.Name = "ckbGenerico";
             this.ckbGenerico.Size = new System.Drawing.Size(69, 17);
@@ -574,6 +573,7 @@
             // 
             // txtAlimento
             // 
+            this.txtAlimento.Enabled = false;
             this.txtAlimento.Location = new System.Drawing.Point(397, 118);
             this.txtAlimento.Name = "txtAlimento";
             this.txtAlimento.Size = new System.Drawing.Size(125, 20);
@@ -581,6 +581,7 @@
             // 
             // txtCantidad
             // 
+            this.txtCantidad.Enabled = false;
             this.txtCantidad.Location = new System.Drawing.Point(397, 144);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(125, 20);
@@ -588,6 +589,7 @@
             // 
             // txtValorCalorico
             // 
+            this.txtValorCalorico.Enabled = false;
             this.txtValorCalorico.Location = new System.Drawing.Point(397, 170);
             this.txtValorCalorico.Name = "txtValorCalorico";
             this.txtValorCalorico.Size = new System.Drawing.Size(125, 20);
@@ -596,6 +598,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
+            this.label18.Enabled = false;
             this.label18.Location = new System.Drawing.Point(313, 173);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(72, 13);
@@ -605,6 +608,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
+            this.label19.Enabled = false;
             this.label19.Location = new System.Drawing.Point(313, 147);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(49, 13);
@@ -614,6 +618,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
+            this.label20.Enabled = false;
             this.label20.Location = new System.Drawing.Point(313, 124);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(47, 13);
@@ -622,6 +627,7 @@
             // 
             // btnAgregarAIngesta
             // 
+            this.btnAgregarAIngesta.Enabled = false;
             this.btnAgregarAIngesta.Location = new System.Drawing.Point(421, 196);
             this.btnAgregarAIngesta.Name = "btnAgregarAIngesta";
             this.btnAgregarAIngesta.Size = new System.Drawing.Size(101, 23);
@@ -632,14 +638,16 @@
             // 
             // lbxIngestas
             // 
+            this.lbxIngestas.Enabled = false;
             this.lbxIngestas.FormattingEnabled = true;
             this.lbxIngestas.Location = new System.Drawing.Point(313, 228);
             this.lbxIngestas.Name = "lbxIngestas";
-            this.lbxIngestas.Size = new System.Drawing.Size(116, 95);
+            this.lbxIngestas.Size = new System.Drawing.Size(116, 82);
             this.lbxIngestas.TabIndex = 49;
             // 
             // btnCrearIngesta
             // 
+            this.btnCrearIngesta.Enabled = false;
             this.btnCrearIngesta.Location = new System.Drawing.Point(313, 196);
             this.btnCrearIngesta.Name = "btnCrearIngesta";
             this.btnCrearIngesta.Size = new System.Drawing.Size(102, 23);
@@ -650,6 +658,7 @@
             // 
             // cbxDia
             // 
+            this.cbxDia.Enabled = false;
             this.cbxDia.FormattingEnabled = true;
             this.cbxDia.Items.AddRange(new object[] {
             "Lunes",
@@ -659,7 +668,7 @@
             "Viernes",
             "Sabado",
             "Domingo"});
-            this.cbxDia.Location = new System.Drawing.Point(435, 250);
+            this.cbxDia.Location = new System.Drawing.Point(438, 243);
             this.cbxDia.Name = "cbxDia";
             this.cbxDia.Size = new System.Drawing.Size(90, 21);
             this.cbxDia.TabIndex = 51;
@@ -667,11 +676,168 @@
             // label21
             // 
             this.label21.AutoSize = true;
+            this.label21.Enabled = false;
             this.label21.Location = new System.Drawing.Point(435, 229);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(23, 13);
             this.label21.TabIndex = 52;
             this.label21.Text = "Dia";
+            // 
+            // cbxDuracion
+            // 
+            this.cbxDuracion.AutoSize = true;
+            this.cbxDuracion.Checked = true;
+            this.cbxDuracion.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxDuracion.Enabled = false;
+            this.cbxDuracion.Location = new System.Drawing.Point(41, 332);
+            this.cbxDuracion.Name = "cbxDuracion";
+            this.cbxDuracion.Size = new System.Drawing.Size(69, 17);
+            this.cbxDuracion.TabIndex = 53;
+            this.cbxDuracion.Text = "Duracion";
+            this.cbxDuracion.UseVisualStyleBackColor = true;
+            this.cbxDuracion.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // etqFechaInicio
+            // 
+            this.etqFechaInicio.AutoSize = true;
+            this.etqFechaInicio.Enabled = false;
+            this.etqFechaInicio.Location = new System.Drawing.Point(29, 255);
+            this.etqFechaInicio.Name = "etqFechaInicio";
+            this.etqFechaInicio.Size = new System.Drawing.Size(28, 13);
+            this.etqFechaInicio.TabIndex = 38;
+            this.etqFechaInicio.Text = "Dias";
+            // 
+            // etqFechaFin
+            // 
+            this.etqFechaFin.AutoSize = true;
+            this.etqFechaFin.Enabled = false;
+            this.etqFechaFin.Location = new System.Drawing.Point(126, 256);
+            this.etqFechaFin.Name = "etqFechaFin";
+            this.etqFechaFin.Size = new System.Drawing.Size(51, 13);
+            this.etqFechaFin.TabIndex = 31;
+            this.etqFechaFin.Text = "Semanas";
+            // 
+            // etqMeses
+            // 
+            this.etqMeses.AutoSize = true;
+            this.etqMeses.Enabled = false;
+            this.etqMeses.Location = new System.Drawing.Point(227, 256);
+            this.etqMeses.Name = "etqMeses";
+            this.etqMeses.Size = new System.Drawing.Size(38, 13);
+            this.etqMeses.TabIndex = 54;
+            this.etqMeses.Text = "Meses";
+            // 
+            // txtDias
+            // 
+            this.txtDias.Enabled = false;
+            this.txtDias.Location = new System.Drawing.Point(32, 272);
+            this.txtDias.Name = "txtDias";
+            this.txtDias.Size = new System.Drawing.Size(59, 20);
+            this.txtDias.TabIndex = 55;
+            // 
+            // txtSemanas
+            // 
+            this.txtSemanas.Enabled = false;
+            this.txtSemanas.Location = new System.Drawing.Point(123, 272);
+            this.txtSemanas.Name = "txtSemanas";
+            this.txtSemanas.Size = new System.Drawing.Size(59, 20);
+            this.txtSemanas.TabIndex = 56;
+            // 
+            // txtMeses
+            // 
+            this.txtMeses.Enabled = false;
+            this.txtMeses.Location = new System.Drawing.Point(222, 274);
+            this.txtMeses.Name = "txtMeses";
+            this.txtMeses.Size = new System.Drawing.Size(59, 20);
+            this.txtMeses.TabIndex = 57;
+            // 
+            // btnConfirmarIngesta
+            // 
+            this.btnConfirmarIngesta.Enabled = false;
+            this.btnConfirmarIngesta.Location = new System.Drawing.Point(316, 367);
+            this.btnConfirmarIngesta.Name = "btnConfirmarIngesta";
+            this.btnConfirmarIngesta.Size = new System.Drawing.Size(116, 23);
+            this.btnConfirmarIngesta.TabIndex = 58;
+            this.btnConfirmarIngesta.Text = "Confirmar Ingesta";
+            this.btnConfirmarIngesta.UseVisualStyleBackColor = true;
+            this.btnConfirmarIngesta.Click += new System.EventHandler(this.btnConfirmarIngesta_Click);
+            // 
+            // btnCrearPlan
+            // 
+            this.btnCrearPlan.Location = new System.Drawing.Point(32, 56);
+            this.btnCrearPlan.Name = "btnCrearPlan";
+            this.btnCrearPlan.Size = new System.Drawing.Size(114, 31);
+            this.btnCrearPlan.TabIndex = 59;
+            this.btnCrearPlan.Text = "Crear Plan";
+            this.btnCrearPlan.UseVisualStyleBackColor = true;
+            this.btnCrearPlan.Click += new System.EventHandler(this.btnCrearPlan_Click);
+            // 
+            // etqMomento
+            // 
+            this.etqMomento.AutoSize = true;
+            this.etqMomento.Enabled = false;
+            this.etqMomento.Location = new System.Drawing.Point(435, 267);
+            this.etqMomento.Name = "etqMomento";
+            this.etqMomento.Size = new System.Drawing.Size(51, 13);
+            this.etqMomento.TabIndex = 61;
+            this.etqMomento.Text = "Momento";
+            // 
+            // cbxMomento
+            // 
+            this.cbxMomento.Enabled = false;
+            this.cbxMomento.FormattingEnabled = true;
+            this.cbxMomento.Items.AddRange(new object[] {
+            "mañana",
+            "media_mañana",
+            "almuerzo",
+            "media_tarde",
+            "tarde",
+            "noche"});
+            this.cbxMomento.Location = new System.Drawing.Point(438, 283);
+            this.cbxMomento.Name = "cbxMomento";
+            this.cbxMomento.Size = new System.Drawing.Size(90, 21);
+            this.cbxMomento.TabIndex = 60;
+            // 
+            // cbxFrecuencia
+            // 
+            this.cbxFrecuencia.FormattingEnabled = true;
+            this.cbxFrecuencia.Items.AddRange(new object[] {
+            "Diaria",
+            "Semanal",
+            "Quincenal",
+            "Mensual"});
+            this.cbxFrecuencia.Location = new System.Drawing.Point(407, 316);
+            this.cbxFrecuencia.Name = "cbxFrecuencia";
+            this.cbxFrecuencia.Size = new System.Drawing.Size(121, 21);
+            this.cbxFrecuencia.TabIndex = 62;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Enabled = false;
+            this.label10.Location = new System.Drawing.Point(313, 319);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 13);
+            this.label10.TabIndex = 63;
+            this.label10.Text = "Frecuencia";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Enabled = false;
+            this.label11.Location = new System.Drawing.Point(29, 96);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(68, 13);
+            this.label11.TabIndex = 65;
+            this.label11.Text = "Nombre Plan";
+            // 
+            // txtNombrePlan
+            // 
+            this.txtNombrePlan.Enabled = false;
+            this.txtNombrePlan.Location = new System.Drawing.Point(119, 93);
+            this.txtNombrePlan.Name = "txtNombrePlan";
+            this.txtNombrePlan.Size = new System.Drawing.Size(162, 20);
+            this.txtNombrePlan.TabIndex = 64;
             // 
             // VentanaInicio
             // 
@@ -723,22 +889,18 @@
         private System.Windows.Forms.RadioButton rBtnTecnico;
         private System.Windows.Forms.RadioButton rBtnDeportista;
         private System.Windows.Forms.Panel panelAgregarPlan;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dtpFechaFin;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnAgregarPlan;
+        private System.Windows.Forms.TextBox txtIMCMax;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DateTimePicker dtpFechaInicio;
+        private System.Windows.Forms.TextBox txtIMCMin;
+        private System.Windows.Forms.TextBox txtEdadMax;
+        private System.Windows.Forms.TextBox txtEdadMin;
+        private System.Windows.Forms.TextBox txtObjetivo;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cbxCategoria;
         private System.Windows.Forms.TextBox txtCantidad;
@@ -753,6 +915,21 @@
         private System.Windows.Forms.Button btnCrearIngesta;
         private System.Windows.Forms.ListBox lbxIngestas;
         private System.Windows.Forms.Button btnAgregarAIngesta;
+        private System.Windows.Forms.CheckBox cbxDuracion;
+        private System.Windows.Forms.TextBox txtMeses;
+        private System.Windows.Forms.TextBox txtSemanas;
+        private System.Windows.Forms.TextBox txtDias;
+        private System.Windows.Forms.Label etqMeses;
+        private System.Windows.Forms.Label etqFechaInicio;
+        private System.Windows.Forms.Label etqFechaFin;
+        private System.Windows.Forms.Button btnConfirmarIngesta;
+        private System.Windows.Forms.Button btnCrearPlan;
+        private System.Windows.Forms.Label etqMomento;
+        private System.Windows.Forms.ComboBox cbxMomento;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cbxFrecuencia;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtNombrePlan;
 
     }
 }
