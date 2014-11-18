@@ -67,7 +67,7 @@ namespace SportFacts
             u.FechaNac = dtpFechaNac.Value;
             u.Username = txtUsername.Text;
 
-            if (ManejadorUsuarios.AgregarUsuario(u))
+            if (Sistema.GetSistema().AgregarUsuario(u))
             {
                 MessageBox.Show("Se agregó el usuario " + txtUsername.Text);
             }
@@ -97,7 +97,7 @@ namespace SportFacts
             Ingesta i = new Ingesta();
             Alimento a = new Alimento() { Nombre = txtAlimento.Text, ValorCalorico = double.Parse(txtValorCalorico.Text) };
             i.Alimentos.Add(new Tuple<Alimento,int>(a, int.Parse(txtCantidad.Text)));
-            ManejadorIngestas.AgregarIngesta(i);
+            Sistema.GetSistema().AgregarIngesta(i);
             lbxIngestas.Items.Add(i);
         }
 
@@ -127,7 +127,7 @@ namespace SportFacts
             {
                 Ingesta i = (Ingesta)lbxIngestas.SelectedItem;
                 p.Ingestas.Add(new Tuple<Ingesta, PlanDietareo.DiaDeSemana, PlanDietareo.MomentoDelDia>(i, (PlanDietareo.DiaDeSemana)cbxDia.SelectedValue, (PlanDietareo.MomentoDelDia)cbxMomento.SelectedValue));
-                ManejadorPlanes.ModificarPlan(p);
+                Sistema.GetSistema().ModificarPlan(p);
                 lbxIngestas.Items.Remove(i);
                 cbxDia.SelectedValue = null;
                 cbxMomento.SelectedValue = null;
@@ -147,7 +147,7 @@ namespace SportFacts
         private void btnAgregarPlan_Click(object sender, EventArgs e)
         {
 
-            if (txtNombrePlan.Text.Equals(String.Empty) || ManejadorPlanes.ExisteNombre(txtNombrePlan.Text))
+            if (txtNombrePlan.Text.Equals(String.Empty) || Sistema.GetSistema().ExistePlanConNombre(txtNombrePlan.Text))
             {
                 MessageBox.Show("Nombre Incorrecto. Por favor ingrese nuevamente");
             }
@@ -197,7 +197,7 @@ namespace SportFacts
                 p.Frecuencia = (PlanDietareo.FrecuenciaPlan)cbxFrecuencia.SelectedValue;
                 p.Generico = ckbGenerico.Checked;
 
-                ManejadorPlanes.ModificarPlan(p);
+                Sistema.GetSistema().ModificarPlan(p);
                 InicializarPlan();
             }
         }
@@ -248,7 +248,7 @@ namespace SportFacts
             btnCrearPlan.Enabled = false;
 
             p = new PlanDietareo();
-            ManejadorPlanes.AgregarPlan(p);
+            Sistema.GetSistema().AgregarPlan(p);
         }
 
         public void FinalizarPlan()
