@@ -28,6 +28,22 @@ namespace Entidades
         public double IMCMax { get; set; }
         public List<Tuple<Ingesta, DiaDeSemana, MomentoDelDia>> Ingestas { get; set; }
         public FrecuenciaPlan Frecuencia { get; set; }
-        public PlanDietareo() { }
+        public PlanDietareo() 
+        {
+            Ingestas = new List<Tuple<Ingesta, DiaDeSemana, MomentoDelDia>>();
+        }
+
+        public override bool Equals(object obj)
+        {
+            try
+            {
+                PlanDietareo pd = (PlanDietareo)obj;
+                return this.identificador == pd.identificador;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

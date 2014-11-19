@@ -14,6 +14,9 @@ namespace Entidades
         public List<Tuple<Alimento, int>> Alimentos { get; set; }
         public double ValorCalorico { get; set; }
 
-        public Ingesta() { }
+        public Ingesta() 
+        {
+            Alimentos = new List<Tuple<Alimento, int>>();
+        }
     }
 }

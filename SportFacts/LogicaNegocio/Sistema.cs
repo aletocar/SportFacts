@@ -122,7 +122,7 @@ namespace LogicaNegocio
 
         public bool PlanNoSirveParaDeportista(Usuario usuario, PlanDietareo planDietareo)
         {
-            return true;
+            return false;
         }
 
         public Usuario[] ObtenerDeportistas(string nombre, string apellido)

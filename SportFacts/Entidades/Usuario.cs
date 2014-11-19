@@ -28,8 +28,15 @@ namespace Entidades
 
         public override bool Equals(object obj)
         {
-            Usuario u = obj as Usuario;
-            return this.Username.Equals(u.Username);
+            try
+            {
+                Usuario u = (Usuario)obj;
+                return this.Username.Equals(u.Username);
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
 
     }

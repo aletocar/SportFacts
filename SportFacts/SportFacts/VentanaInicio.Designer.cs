@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panelInicio = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnAgregarUsuario = new System.Windows.Forms.Button();
@@ -57,30 +57,8 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.panelPlan = new System.Windows.Forms.Panel();
             this.btnAsignarPlan = new System.Windows.Forms.Button();
-            this.panelAsignarPlan = new System.Windows.Forms.Panel();
-            this.PlanesLbx = new System.Windows.Forms.ListBox();
-            this.rbtnPrincipal = new System.Windows.Forms.RadioButton();
-            this.rbtnSecundario = new System.Windows.Forms.RadioButton();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.PlanesAsignadosLbx = new System.Windows.Forms.ListBox();
-            this.deportistasLbx = new System.Windows.Forms.ListBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.fechaNacDeportistaDtp = new System.Windows.Forms.DateTimePicker();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.mailDeportistaTxt = new System.Windows.Forms.TextBox();
-            this.usuarioDeportistaTxt = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.numeroDeportistaTXT = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.apellidoDeportistaTxt = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.nombreDeportistaTxt = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.btnBorrarPlan = new System.Windows.Forms.Button();
+            this.btnCrearPlan = new System.Windows.Forms.Button();
             this.panelAgregarPlanDietareo = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -124,7 +102,6 @@
             this.txtEdadMax = new System.Windows.Forms.TextBox();
             this.txtEdadMin = new System.Windows.Forms.TextBox();
             this.txtObjetivo = new System.Windows.Forms.TextBox();
-            this.btnCrearPlan = new System.Windows.Forms.Button();
             this.panelBorrarPlan = new System.Windows.Forms.Panel();
             this.listaPlanes = new System.Windows.Forms.ListBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -154,20 +131,43 @@
             this.edadMaximaBuscarTxt = new System.Windows.Forms.TextBox();
             this.edadMinimaBuscarTxt = new System.Windows.Forms.TextBox();
             this.objetivoPlanBuscarTxt = new System.Windows.Forms.TextBox();
+            this.panelAsignarPlan = new System.Windows.Forms.Panel();
+            this.PlanesLbx = new System.Windows.Forms.ListBox();
+            this.rbtnPrincipal = new System.Windows.Forms.RadioButton();
+            this.rbtnSecundario = new System.Windows.Forms.RadioButton();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.PlanesAsignadosLbx = new System.Windows.Forms.ListBox();
+            this.deportistasLbx = new System.Windows.Forms.ListBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.fechaNacDeportistaDtp = new System.Windows.Forms.DateTimePicker();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.mailDeportistaTxt = new System.Windows.Forms.TextBox();
+            this.usuarioDeportistaTxt = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.numeroDeportistaTXT = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.apellidoDeportistaTxt = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.nombreDeportistaTxt = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panelInicio.SuspendLayout();
             this.panelAgregarUsuario.SuspendLayout();
             this.panelPlan.SuspendLayout();
-            this.panelAsignarPlan.SuspendLayout();
             this.panelAgregarPlanDietareo.SuspendLayout();
             this.panelBorrarPlan.SuspendLayout();
+            this.panelAsignarPlan.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelInicio
             // 
             this.panelInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelInicio.Controls.Add(this.label2);
             this.panelInicio.Controls.Add(this.textBox2);
             this.panelInicio.Controls.Add(this.textBox1);
-            this.panelInicio.Controls.Add(this.label2);
             this.panelInicio.Controls.Add(this.label1);
             this.panelInicio.Controls.Add(this.btnIngresar);
             this.panelInicio.Controls.Add(this.btnAgregarUsuario);
@@ -176,6 +176,17 @@
             this.panelInicio.Name = "panelInicio";
             this.panelInicio.Size = new System.Drawing.Size(546, 192);
             this.panelInicio.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 81);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(124, 26);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Contraseña";
             // 
             // textBox2
             // 
@@ -195,17 +206,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(396, 31);
             this.textBox1.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 81);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 26);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Contraseña";
             // 
             // label1
             // 
@@ -465,11 +465,11 @@
             // 
             this.panelPlan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelPlan.Controls.Add(this.btnAsignarPlan);
-            this.panelPlan.Controls.Add(this.panelAsignarPlan);
             this.panelPlan.Controls.Add(this.btnBorrarPlan);
-            this.panelPlan.Controls.Add(this.panelAgregarPlanDietareo);
             this.panelPlan.Controls.Add(this.btnCrearPlan);
             this.panelPlan.Controls.Add(this.panelBorrarPlan);
+            this.panelPlan.Controls.Add(this.panelAsignarPlan);
+            this.panelPlan.Controls.Add(this.panelAgregarPlanDietareo);
             this.panelPlan.Location = new System.Drawing.Point(460, 184);
             this.panelPlan.Margin = new System.Windows.Forms.Padding(6);
             this.panelPlan.Name = "panelPlan";
@@ -489,251 +489,6 @@
             this.btnAsignarPlan.UseVisualStyleBackColor = true;
             this.btnAsignarPlan.Click += new System.EventHandler(this.btnAsignarPlan_Click);
             // 
-            // panelAsignarPlan
-            // 
-            this.panelAsignarPlan.Controls.Add(this.PlanesLbx);
-            this.panelAsignarPlan.Controls.Add(this.rbtnPrincipal);
-            this.panelAsignarPlan.Controls.Add(this.rbtnSecundario);
-            this.panelAsignarPlan.Controls.Add(this.label41);
-            this.panelAsignarPlan.Controls.Add(this.label40);
-            this.panelAsignarPlan.Controls.Add(this.PlanesAsignadosLbx);
-            this.panelAsignarPlan.Controls.Add(this.deportistasLbx);
-            this.panelAsignarPlan.Controls.Add(this.label32);
-            this.panelAsignarPlan.Controls.Add(this.fechaNacDeportistaDtp);
-            this.panelAsignarPlan.Controls.Add(this.label30);
-            this.panelAsignarPlan.Controls.Add(this.label31);
-            this.panelAsignarPlan.Controls.Add(this.mailDeportistaTxt);
-            this.panelAsignarPlan.Controls.Add(this.usuarioDeportistaTxt);
-            this.panelAsignarPlan.Controls.Add(this.label26);
-            this.panelAsignarPlan.Controls.Add(this.numeroDeportistaTXT);
-            this.panelAsignarPlan.Controls.Add(this.label27);
-            this.panelAsignarPlan.Controls.Add(this.apellidoDeportistaTxt);
-            this.panelAsignarPlan.Controls.Add(this.label29);
-            this.panelAsignarPlan.Controls.Add(this.nombreDeportistaTxt);
-            this.panelAsignarPlan.Controls.Add(this.button1);
-            this.panelAsignarPlan.Controls.Add(this.button4);
-            this.panelAsignarPlan.Controls.Add(this.button5);
-            this.panelAsignarPlan.Location = new System.Drawing.Point(32, 123);
-            this.panelAsignarPlan.Name = "panelAsignarPlan";
-            this.panelAsignarPlan.Size = new System.Drawing.Size(1025, 611);
-            this.panelAsignarPlan.TabIndex = 110;
-            this.panelAsignarPlan.Visible = false;
-            // 
-            // PlanesLbx
-            // 
-            this.PlanesLbx.FormattingEnabled = true;
-            this.PlanesLbx.ItemHeight = 25;
-            this.PlanesLbx.Location = new System.Drawing.Point(644, 290);
-            this.PlanesLbx.Name = "PlanesLbx";
-            this.PlanesLbx.Size = new System.Drawing.Size(295, 129);
-            this.PlanesLbx.TabIndex = 122;
-            // 
-            // rbtnPrincipal
-            // 
-            this.rbtnPrincipal.AutoSize = true;
-            this.rbtnPrincipal.Checked = true;
-            this.rbtnPrincipal.Location = new System.Drawing.Point(570, 446);
-            this.rbtnPrincipal.Name = "rbtnPrincipal";
-            this.rbtnPrincipal.Size = new System.Drawing.Size(121, 30);
-            this.rbtnPrincipal.TabIndex = 121;
-            this.rbtnPrincipal.TabStop = true;
-            this.rbtnPrincipal.Text = "Principal";
-            this.rbtnPrincipal.UseVisualStyleBackColor = true;
-            // 
-            // rbtnSecundario
-            // 
-            this.rbtnSecundario.AutoSize = true;
-            this.rbtnSecundario.Location = new System.Drawing.Point(779, 446);
-            this.rbtnSecundario.Name = "rbtnSecundario";
-            this.rbtnSecundario.Size = new System.Drawing.Size(147, 30);
-            this.rbtnSecundario.TabIndex = 120;
-            this.rbtnSecundario.Text = "Secundario";
-            this.rbtnSecundario.UseVisualStyleBackColor = true;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(653, 19);
-            this.label41.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(122, 26);
-            this.label41.TabIndex = 119;
-            this.label41.Text = "Deportistas";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(10, 315);
-            this.label40.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(187, 26);
-            this.label40.TabIndex = 118;
-            this.label40.Text = "Planes Asignados";
-            // 
-            // PlanesAsignadosLbx
-            // 
-            this.PlanesAsignadosLbx.FormattingEnabled = true;
-            this.PlanesAsignadosLbx.ItemHeight = 25;
-            this.PlanesAsignadosLbx.Location = new System.Drawing.Point(205, 292);
-            this.PlanesAsignadosLbx.Name = "PlanesAsignadosLbx";
-            this.PlanesAsignadosLbx.Size = new System.Drawing.Size(225, 104);
-            this.PlanesAsignadosLbx.TabIndex = 117;
-            // 
-            // deportistasLbx
-            // 
-            this.deportistasLbx.FormattingEnabled = true;
-            this.deportistasLbx.ItemHeight = 25;
-            this.deportistasLbx.Location = new System.Drawing.Point(644, 48);
-            this.deportistasLbx.Name = "deportistasLbx";
-            this.deportistasLbx.Size = new System.Drawing.Size(295, 179);
-            this.deportistasLbx.TabIndex = 116;
-            this.deportistasLbx.SelectedIndexChanged += new System.EventHandler(this.deportistasLbx_SelectedIndexChanged);
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(9, 240);
-            this.label32.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(218, 26);
-            this.label32.TabIndex = 19;
-            this.label32.Text = "Fecha de Nacimiento";
-            // 
-            // fechaNacDeportistaDtp
-            // 
-            this.fechaNacDeportistaDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fechaNacDeportistaDtp.Location = new System.Drawing.Point(269, 239);
-            this.fechaNacDeportistaDtp.Margin = new System.Windows.Forms.Padding(6);
-            this.fechaNacDeportistaDtp.MaxDate = new System.DateTime(2014, 11, 8, 0, 0, 0, 0);
-            this.fechaNacDeportistaDtp.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.fechaNacDeportistaDtp.Name = "fechaNacDeportistaDtp";
-            this.fechaNacDeportistaDtp.Size = new System.Drawing.Size(161, 31);
-            this.fechaNacDeportistaDtp.TabIndex = 18;
-            this.fechaNacDeportistaDtp.Value = new System.DateTime(2014, 11, 8, 0, 0, 0, 0);
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(6, 196);
-            this.label30.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(52, 26);
-            this.label30.TabIndex = 115;
-            this.label30.Text = "Mail";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(6, 159);
-            this.label31.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(113, 26);
-            this.label31.TabIndex = 114;
-            this.label31.Text = "Username";
-            // 
-            // mailDeportistaTxt
-            // 
-            this.mailDeportistaTxt.Location = new System.Drawing.Point(186, 196);
-            this.mailDeportistaTxt.Margin = new System.Windows.Forms.Padding(6);
-            this.mailDeportistaTxt.Name = "mailDeportistaTxt";
-            this.mailDeportistaTxt.Size = new System.Drawing.Size(244, 31);
-            this.mailDeportistaTxt.TabIndex = 113;
-            // 
-            // usuarioDeportistaTxt
-            // 
-            this.usuarioDeportistaTxt.Location = new System.Drawing.Point(186, 153);
-            this.usuarioDeportistaTxt.Margin = new System.Windows.Forms.Padding(6);
-            this.usuarioDeportistaTxt.Name = "usuarioDeportistaTxt";
-            this.usuarioDeportistaTxt.Size = new System.Drawing.Size(244, 31);
-            this.usuarioDeportistaTxt.TabIndex = 112;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(6, 116);
-            this.label26.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(90, 26);
-            this.label26.TabIndex = 111;
-            this.label26.Text = "Numero";
-            // 
-            // numeroDeportistaTXT
-            // 
-            this.numeroDeportistaTXT.Location = new System.Drawing.Point(186, 110);
-            this.numeroDeportistaTXT.Margin = new System.Windows.Forms.Padding(6);
-            this.numeroDeportistaTXT.Name = "numeroDeportistaTXT";
-            this.numeroDeportistaTXT.Size = new System.Drawing.Size(241, 31);
-            this.numeroDeportistaTXT.TabIndex = 110;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(6, 73);
-            this.label27.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(90, 26);
-            this.label27.TabIndex = 109;
-            this.label27.Text = "Apellido";
-            // 
-            // apellidoDeportistaTxt
-            // 
-            this.apellidoDeportistaTxt.Location = new System.Drawing.Point(186, 67);
-            this.apellidoDeportistaTxt.Margin = new System.Windows.Forms.Padding(6);
-            this.apellidoDeportistaTxt.Name = "apellidoDeportistaTxt";
-            this.apellidoDeportistaTxt.Size = new System.Drawing.Size(241, 31);
-            this.apellidoDeportistaTxt.TabIndex = 108;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(6, 30);
-            this.label29.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(90, 26);
-            this.label29.TabIndex = 107;
-            this.label29.Text = "Nombre";
-            // 
-            // nombreDeportistaTxt
-            // 
-            this.nombreDeportistaTxt.Location = new System.Drawing.Point(186, 24);
-            this.nombreDeportistaTxt.Margin = new System.Windows.Forms.Padding(6);
-            this.nombreDeportistaTxt.Name = "nombreDeportistaTxt";
-            this.nombreDeportistaTxt.Size = new System.Drawing.Size(241, 31);
-            this.nombreDeportistaTxt.TabIndex = 106;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(461, 45);
-            this.button1.Margin = new System.Windows.Forms.Padding(6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 74);
-            this.button1.TabIndex = 101;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(158, 551);
-            this.button4.Margin = new System.Windows.Forms.Padding(6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 44);
-            this.button4.TabIndex = 80;
-            this.button4.Text = "Cancelar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(360, 551);
-            this.button5.Margin = new System.Windows.Forms.Padding(6);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(150, 44);
-            this.button5.TabIndex = 79;
-            this.button5.Text = "Agregar";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // btnBorrarPlan
             // 
             this.btnBorrarPlan.Location = new System.Drawing.Point(278, 54);
@@ -743,6 +498,18 @@
             this.btnBorrarPlan.TabIndex = 60;
             this.btnBorrarPlan.Text = "Borrar Plan";
             this.btnBorrarPlan.UseVisualStyleBackColor = true;
+            this.btnBorrarPlan.Click += new System.EventHandler(this.btnBorrarPlan_Click);
+            // 
+            // btnCrearPlan
+            // 
+            this.btnCrearPlan.Location = new System.Drawing.Point(38, 54);
+            this.btnCrearPlan.Margin = new System.Windows.Forms.Padding(6);
+            this.btnCrearPlan.Name = "btnCrearPlan";
+            this.btnCrearPlan.Size = new System.Drawing.Size(228, 60);
+            this.btnCrearPlan.TabIndex = 59;
+            this.btnCrearPlan.Text = "Crear Plan";
+            this.btnCrearPlan.UseVisualStyleBackColor = true;
+            this.btnCrearPlan.Click += new System.EventHandler(this.btnCrearPlan_Click);
             // 
             // panelAgregarPlanDietareo
             // 
@@ -792,6 +559,7 @@
             this.panelAgregarPlanDietareo.Name = "panelAgregarPlanDietareo";
             this.panelAgregarPlanDietareo.Size = new System.Drawing.Size(1025, 611);
             this.panelAgregarPlanDietareo.TabIndex = 3;
+            this.panelAgregarPlanDietareo.Visible = false;
             // 
             // label15
             // 
@@ -900,6 +668,7 @@
             this.btnConfirmarIngesta.TabIndex = 101;
             this.btnConfirmarIngesta.Text = "Confirmar Ingesta";
             this.btnConfirmarIngesta.UseVisualStyleBackColor = true;
+            this.btnConfirmarIngesta.Click += new System.EventHandler(this.btnConfirmarIngesta_Click_1);
             // 
             // txtMeses
             // 
@@ -984,6 +753,7 @@
             this.btnCrearIngesta.TabIndex = 93;
             this.btnCrearIngesta.Text = "Crear Ingesta";
             this.btnCrearIngesta.UseVisualStyleBackColor = true;
+            this.btnCrearIngesta.Click += new System.EventHandler(this.btnCrearIngesta_Click_1);
             // 
             // lbxIngestas
             // 
@@ -1004,6 +774,7 @@
             this.btnAgregarAIngesta.TabIndex = 91;
             this.btnAgregarAIngesta.Text = "Agregar a Ingesta";
             this.btnAgregarAIngesta.UseVisualStyleBackColor = true;
+            this.btnAgregarAIngesta.Click += new System.EventHandler(this.btnAgregarAIngesta_Click_1);
             // 
             // label18
             // 
@@ -1125,6 +896,7 @@
             this.btnAgregarPlan.TabIndex = 79;
             this.btnAgregarPlan.Text = "Agregar";
             this.btnAgregarPlan.UseVisualStyleBackColor = true;
+            this.btnAgregarPlan.Click += new System.EventHandler(this.btnAgregarPlan_Click_1);
             // 
             // etqFechaFin
             // 
@@ -1215,17 +987,6 @@
             this.txtObjetivo.Name = "txtObjetivo";
             this.txtObjetivo.Size = new System.Drawing.Size(320, 31);
             this.txtObjetivo.TabIndex = 68;
-            // 
-            // btnCrearPlan
-            // 
-            this.btnCrearPlan.Location = new System.Drawing.Point(38, 54);
-            this.btnCrearPlan.Margin = new System.Windows.Forms.Padding(6);
-            this.btnCrearPlan.Name = "btnCrearPlan";
-            this.btnCrearPlan.Size = new System.Drawing.Size(228, 60);
-            this.btnCrearPlan.TabIndex = 59;
-            this.btnCrearPlan.Text = "Crear Plan";
-            this.btnCrearPlan.UseVisualStyleBackColor = true;
-            this.btnCrearPlan.Click += new System.EventHandler(this.btnCrearPlan_Click);
             // 
             // panelBorrarPlan
             // 
@@ -1535,14 +1296,259 @@
             this.objetivoPlanBuscarTxt.Size = new System.Drawing.Size(320, 31);
             this.objetivoPlanBuscarTxt.TabIndex = 68;
             // 
+            // panelAsignarPlan
+            // 
+            this.panelAsignarPlan.Controls.Add(this.PlanesLbx);
+            this.panelAsignarPlan.Controls.Add(this.rbtnPrincipal);
+            this.panelAsignarPlan.Controls.Add(this.rbtnSecundario);
+            this.panelAsignarPlan.Controls.Add(this.label41);
+            this.panelAsignarPlan.Controls.Add(this.label40);
+            this.panelAsignarPlan.Controls.Add(this.PlanesAsignadosLbx);
+            this.panelAsignarPlan.Controls.Add(this.deportistasLbx);
+            this.panelAsignarPlan.Controls.Add(this.label32);
+            this.panelAsignarPlan.Controls.Add(this.fechaNacDeportistaDtp);
+            this.panelAsignarPlan.Controls.Add(this.label30);
+            this.panelAsignarPlan.Controls.Add(this.label31);
+            this.panelAsignarPlan.Controls.Add(this.mailDeportistaTxt);
+            this.panelAsignarPlan.Controls.Add(this.usuarioDeportistaTxt);
+            this.panelAsignarPlan.Controls.Add(this.label26);
+            this.panelAsignarPlan.Controls.Add(this.numeroDeportistaTXT);
+            this.panelAsignarPlan.Controls.Add(this.label27);
+            this.panelAsignarPlan.Controls.Add(this.apellidoDeportistaTxt);
+            this.panelAsignarPlan.Controls.Add(this.label29);
+            this.panelAsignarPlan.Controls.Add(this.nombreDeportistaTxt);
+            this.panelAsignarPlan.Controls.Add(this.button1);
+            this.panelAsignarPlan.Controls.Add(this.button4);
+            this.panelAsignarPlan.Controls.Add(this.button5);
+            this.panelAsignarPlan.Location = new System.Drawing.Point(32, 123);
+            this.panelAsignarPlan.Name = "panelAsignarPlan";
+            this.panelAsignarPlan.Size = new System.Drawing.Size(1025, 611);
+            this.panelAsignarPlan.TabIndex = 110;
+            this.panelAsignarPlan.Visible = false;
+            // 
+            // PlanesLbx
+            // 
+            this.PlanesLbx.FormattingEnabled = true;
+            this.PlanesLbx.ItemHeight = 25;
+            this.PlanesLbx.Location = new System.Drawing.Point(644, 290);
+            this.PlanesLbx.Name = "PlanesLbx";
+            this.PlanesLbx.Size = new System.Drawing.Size(295, 129);
+            this.PlanesLbx.TabIndex = 122;
+            // 
+            // rbtnPrincipal
+            // 
+            this.rbtnPrincipal.AutoSize = true;
+            this.rbtnPrincipal.Checked = true;
+            this.rbtnPrincipal.Location = new System.Drawing.Point(570, 446);
+            this.rbtnPrincipal.Name = "rbtnPrincipal";
+            this.rbtnPrincipal.Size = new System.Drawing.Size(121, 30);
+            this.rbtnPrincipal.TabIndex = 121;
+            this.rbtnPrincipal.TabStop = true;
+            this.rbtnPrincipal.Text = "Principal";
+            this.rbtnPrincipal.UseVisualStyleBackColor = true;
+            // 
+            // rbtnSecundario
+            // 
+            this.rbtnSecundario.AutoSize = true;
+            this.rbtnSecundario.Location = new System.Drawing.Point(779, 446);
+            this.rbtnSecundario.Name = "rbtnSecundario";
+            this.rbtnSecundario.Size = new System.Drawing.Size(147, 30);
+            this.rbtnSecundario.TabIndex = 120;
+            this.rbtnSecundario.Text = "Secundario";
+            this.rbtnSecundario.UseVisualStyleBackColor = true;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(653, 19);
+            this.label41.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(122, 26);
+            this.label41.TabIndex = 119;
+            this.label41.Text = "Deportistas";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(10, 315);
+            this.label40.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(187, 26);
+            this.label40.TabIndex = 118;
+            this.label40.Text = "Planes Asignados";
+            // 
+            // PlanesAsignadosLbx
+            // 
+            this.PlanesAsignadosLbx.FormattingEnabled = true;
+            this.PlanesAsignadosLbx.ItemHeight = 25;
+            this.PlanesAsignadosLbx.Location = new System.Drawing.Point(205, 292);
+            this.PlanesAsignadosLbx.Name = "PlanesAsignadosLbx";
+            this.PlanesAsignadosLbx.Size = new System.Drawing.Size(225, 104);
+            this.PlanesAsignadosLbx.TabIndex = 117;
+            // 
+            // deportistasLbx
+            // 
+            this.deportistasLbx.FormattingEnabled = true;
+            this.deportistasLbx.ItemHeight = 25;
+            this.deportistasLbx.Location = new System.Drawing.Point(644, 48);
+            this.deportistasLbx.Name = "deportistasLbx";
+            this.deportistasLbx.Size = new System.Drawing.Size(295, 179);
+            this.deportistasLbx.TabIndex = 116;
+            this.deportistasLbx.SelectedIndexChanged += new System.EventHandler(this.deportistasLbx_SelectedIndexChanged);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(9, 240);
+            this.label32.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(218, 26);
+            this.label32.TabIndex = 19;
+            this.label32.Text = "Fecha de Nacimiento";
+            // 
+            // fechaNacDeportistaDtp
+            // 
+            this.fechaNacDeportistaDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaNacDeportistaDtp.Location = new System.Drawing.Point(269, 239);
+            this.fechaNacDeportistaDtp.Margin = new System.Windows.Forms.Padding(6);
+            this.fechaNacDeportistaDtp.MaxDate = new System.DateTime(2014, 11, 8, 0, 0, 0, 0);
+            this.fechaNacDeportistaDtp.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.fechaNacDeportistaDtp.Name = "fechaNacDeportistaDtp";
+            this.fechaNacDeportistaDtp.Size = new System.Drawing.Size(161, 31);
+            this.fechaNacDeportistaDtp.TabIndex = 18;
+            this.fechaNacDeportistaDtp.Value = new System.DateTime(2014, 11, 8, 0, 0, 0, 0);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(6, 196);
+            this.label30.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(52, 26);
+            this.label30.TabIndex = 115;
+            this.label30.Text = "Mail";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(6, 159);
+            this.label31.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(113, 26);
+            this.label31.TabIndex = 114;
+            this.label31.Text = "Username";
+            // 
+            // mailDeportistaTxt
+            // 
+            this.mailDeportistaTxt.Location = new System.Drawing.Point(186, 196);
+            this.mailDeportistaTxt.Margin = new System.Windows.Forms.Padding(6);
+            this.mailDeportistaTxt.Name = "mailDeportistaTxt";
+            this.mailDeportistaTxt.Size = new System.Drawing.Size(244, 31);
+            this.mailDeportistaTxt.TabIndex = 113;
+            // 
+            // usuarioDeportistaTxt
+            // 
+            this.usuarioDeportistaTxt.Location = new System.Drawing.Point(186, 153);
+            this.usuarioDeportistaTxt.Margin = new System.Windows.Forms.Padding(6);
+            this.usuarioDeportistaTxt.Name = "usuarioDeportistaTxt";
+            this.usuarioDeportistaTxt.Size = new System.Drawing.Size(244, 31);
+            this.usuarioDeportistaTxt.TabIndex = 112;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(6, 116);
+            this.label26.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(90, 26);
+            this.label26.TabIndex = 111;
+            this.label26.Text = "Numero";
+            // 
+            // numeroDeportistaTXT
+            // 
+            this.numeroDeportistaTXT.Location = new System.Drawing.Point(186, 110);
+            this.numeroDeportistaTXT.Margin = new System.Windows.Forms.Padding(6);
+            this.numeroDeportistaTXT.Name = "numeroDeportistaTXT";
+            this.numeroDeportistaTXT.Size = new System.Drawing.Size(241, 31);
+            this.numeroDeportistaTXT.TabIndex = 110;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(6, 73);
+            this.label27.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(90, 26);
+            this.label27.TabIndex = 109;
+            this.label27.Text = "Apellido";
+            // 
+            // apellidoDeportistaTxt
+            // 
+            this.apellidoDeportistaTxt.Location = new System.Drawing.Point(186, 67);
+            this.apellidoDeportistaTxt.Margin = new System.Windows.Forms.Padding(6);
+            this.apellidoDeportistaTxt.Name = "apellidoDeportistaTxt";
+            this.apellidoDeportistaTxt.Size = new System.Drawing.Size(241, 31);
+            this.apellidoDeportistaTxt.TabIndex = 108;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(6, 30);
+            this.label29.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(90, 26);
+            this.label29.TabIndex = 107;
+            this.label29.Text = "Nombre";
+            // 
+            // nombreDeportistaTxt
+            // 
+            this.nombreDeportistaTxt.Location = new System.Drawing.Point(186, 24);
+            this.nombreDeportistaTxt.Margin = new System.Windows.Forms.Padding(6);
+            this.nombreDeportistaTxt.Name = "nombreDeportistaTxt";
+            this.nombreDeportistaTxt.Size = new System.Drawing.Size(241, 31);
+            this.nombreDeportistaTxt.TabIndex = 106;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(461, 45);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 74);
+            this.button1.TabIndex = 101;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(158, 551);
+            this.button4.Margin = new System.Windows.Forms.Padding(6);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(150, 44);
+            this.button4.TabIndex = 80;
+            this.button4.Text = "Cancelar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(360, 551);
+            this.button5.Margin = new System.Windows.Forms.Padding(6);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(150, 44);
+            this.button5.TabIndex = 79;
+            this.button5.Text = "Agregar";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // VentanaInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2016, 1402);
-            this.Controls.Add(this.panelInicio);
-            this.Controls.Add(this.panelAgregarUsuario);
             this.Controls.Add(this.panelPlan);
+            this.Controls.Add(this.panelAgregarUsuario);
+            this.Controls.Add(this.panelInicio);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "VentanaInicio";
             this.Text = "Sport Facts";
@@ -1551,12 +1557,12 @@
             this.panelAgregarUsuario.ResumeLayout(false);
             this.panelAgregarUsuario.PerformLayout();
             this.panelPlan.ResumeLayout(false);
-            this.panelAsignarPlan.ResumeLayout(false);
-            this.panelAsignarPlan.PerformLayout();
             this.panelAgregarPlanDietareo.ResumeLayout(false);
             this.panelAgregarPlanDietareo.PerformLayout();
             this.panelBorrarPlan.ResumeLayout(false);
             this.panelBorrarPlan.PerformLayout();
+            this.panelAsignarPlan.ResumeLayout(false);
+            this.panelAsignarPlan.PerformLayout();
             this.ResumeLayout(false);
 
         }

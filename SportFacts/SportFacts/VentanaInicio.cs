@@ -21,8 +21,42 @@ namespace SportFacts
         public VentanaInicio()
         {
             InitializeComponent();
-
+            datosPrueba();
         }
+
+        private void datosPrueba()
+        {
+            Usuario u = new Usuario();
+            u.Nombre = "u";
+            u.Apellido = "u";
+            u.Username = "u";
+            u.Password = "u";
+            u.FechaNac = System.DateTime.Now.AddDays(-10000);
+            u.tipo = Usuario.Tipo.Deportista;
+            Sistema.GetSistema().AgregarUsuario(u);
+
+            PlanDietareo p = new PlanDietareo()
+            {
+                Categoria = PlanDietareo.CategoriaPlan.Categoria1,
+                Duracion = TimeSpan.FromDays(30),
+                EdadMax = 30,
+                EdadMin = 10,
+                Frecuencia = PlanDietareo.FrecuenciaPlan.diaria,
+                Generico = true,
+                identificador = "PD-1",
+                IMCMax = 100,
+                IMCMin = 10,
+                NombrePlan = "a",
+                Objetivo = "a",
+            };
+            Alimento a = new Alimento() { Nombre = "Pez", ValorCalorico = 100 };
+            Ingesta i = new Ingesta() { ValorCalorico = 100 };
+            i.Alimentos.Add(new Tuple<Alimento, int>(a, 200));
+            p.Ingestas.Add(new Tuple<Ingesta, PlanDietareo.DiaDeSemana, PlanDietareo.MomentoDelDia>(i, PlanDietareo.DiaDeSemana.Lunes, PlanDietareo.MomentoDelDia.mañana));
+            Sistema.GetSistema().AgregarPlan(p);
+        }
+
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -138,6 +172,7 @@ namespace SportFacts
 
         private void btnCrearPlan_Click(object sender, EventArgs e)
         {
+            panelAgregarPlanDietareo.Visible = true;
             InicializarPlan();
         }
 
@@ -246,11 +281,6 @@ namespace SportFacts
             btnCrearIngesta.Enabled = true;
             btnConfirmarIngesta.Enabled = true;
             btnCancelar.Enabled = true;
-
-            btnCrearPlan.Enabled = false;
-
-            p = new PlanDietareo();
-            Sistema.GetSistema().AgregarPlan(p);
         }
 
         public void FinalizarPlan()
@@ -360,9 +390,9 @@ namespace SportFacts
                 if (MessageBox.Show("Esta seguro que desea borrar?", "Borrar Plan", MessageBoxButtons.YesNo).Equals(DialogResult.Yes))
                 {
                     panelBorrarPlan.Visible = false;
-                    listaPlanes.Items.Clear();
                     PlanDietareo p = (PlanDietareo)listaPlanes.SelectedItem;
                     Sistema.GetSistema().PlanesDietareaos.Remove(p);
+                    listaPlanes.Items.Clear();
                 }
             }
             else
@@ -422,18 +452,135 @@ namespace SportFacts
 
         private void deportistasLbx_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Usuario u = (Usuario)deportistasLbx.SelectedItem;
-            nombreDeportistaTxt.Text = u.Nombre;
-            apellidoDeportistaTxt.Text = u.Apellido;
-            usuarioDeportistaTxt.Text = u.Username;
-            mailDeportistaTxt.Text = u.Mail;
-            fechaNacDeportistaDtp.Value = u.FechaNac;
-            //PlanesAsignadosLbx.Items.AddRange(u.ListaPlan);
+            if (deportistasLbx.SelectedIndex >= 0)
+            {
+                Usuario u = (Usuario)deportistasLbx.SelectedItem;
+                nombreDeportistaTxt.Text = u.Nombre;
+                apellidoDeportistaTxt.Text = u.Apellido;
+                usuarioDeportistaTxt.Text = u.Username;
+                mailDeportistaTxt.Text = u.Mail;
+                fechaNacDeportistaDtp.Value = u.FechaNac;
+                PlanesAsignadosLbx.Items.AddRange(u.ListaPlan.ToArray());
+            }
         }
 
         private void btnAsignarPlan_Click(object sender, EventArgs e)
         {
             panelAsignarPlan.Visible = true;
+            PlanesLbx.Items.AddRange(Sistema.GetSistema().PlanesDietareaos.ToArray());
+        }
+
+        private void btnBorrarPlan_Click(object sender, EventArgs e)
+        {
+            panelBorrarPlan.Visible = true;
+        }
+
+        private void btnCrearIngesta_Click_1(object sender, EventArgs e)
+        {
+            Ingesta i = new Ingesta();
+            lbxIngestas.Items.Add(i);
+        }
+
+        private void btnAgregarAIngesta_Click_1(object sender, EventArgs e)
+        {
+            Alimento a = new Alimento();
+            a.Nombre = txtAlimento.Text;
+            a.ValorCalorico = double.Parse(txtValorCalorico.Text);
+            if (lbxIngestas.SelectedItem != null)
+            {
+                Ingesta i = (Ingesta)lbxIngestas.SelectedItem;
+                Tuple<Alimento, int> tupla = new Tuple<Alimento, int>(a, int.Parse(txtCantidad.Text));
+                i.Alimentos.Add(tupla);
+            }
+        }
+
+        private void btnConfirmarIngesta_Click_1(object sender, EventArgs e)
+        {
+
+            if (lbxIngestas.SelectedItem != null)
+            {
+                Ingesta i = (Ingesta)lbxIngestas.SelectedItem;
+                PlanDietareo.DiaDeSemana dia = PlanDietareo.DiaDeSemana.Martes;
+                PlanDietareo.MomentoDelDia momento = PlanDietareo.MomentoDelDia.noche;
+                if (cbxDia.SelectedIndex == 0)
+                {
+                    dia = PlanDietareo.DiaDeSemana.Lunes;
+                }
+                if (cbxMomento.SelectedIndex == 0)
+                {
+                    momento = PlanDietareo.MomentoDelDia.mañana;   
+                }
+                p.Ingestas.Add(new Tuple<Ingesta, PlanDietareo.DiaDeSemana, PlanDietareo.MomentoDelDia>(i, dia, momento));
+                lbxIngestas.Items.Remove(i);
+                cbxDia.SelectedValue = null;
+                cbxMomento.SelectedValue = null;
+            
+            }
+        }
+
+        private void btnAgregarPlan_Click_1(object sender, EventArgs e)
+        {
+            if (txtNombrePlan.Text.Equals(String.Empty) || Sistema.GetSistema().ExistePlanConNombre(txtNombrePlan.Text))
+            {
+                MessageBox.Show("Nombre Incorrecto. Por favor ingrese nuevamente");
+            }
+            else if (txtObjetivo.Text.Equals(String.Empty))
+            {
+                MessageBox.Show("Objetivo Incorrecto. Por favor ingrese nuevamente");
+            }//Falta que chequee si selecciono generico o no. CA 1.4
+            else if (!paraTodasEdades && (txtEdadMax.Text.Equals(String.Empty) || txtEdadMin.Text.Equals(String.Empty)))
+            {
+                paraTodasEdades = true;
+                MessageBox.Show("Rango etareo no especificado. Se tomara en cuenta que es valido para todas las edades.");
+            }
+            else if (!paraTodasIMC && (txtIMCMax.Text.Equals(String.Empty) || txtIMCMin.Text.Equals(String.Empty)))
+            {
+                paraTodasEdades = true;
+                MessageBox.Show("Rango IMC no especificado. Se tomara en cuenta que es valido para todos los valores.");
+            }
+            else if (cbxFrecuencia.SelectedItem == null)
+            {
+                MessageBox.Show("No se selecciona frecuencia. Se toma en cuenta que es diaria.");
+                cbxFrecuencia.SelectedIndex = 0;
+            }
+            else if (p.Ingestas.Count == 0)
+            {
+                MessageBox.Show("No se han ingresado Ingestas. Presione cancelar para salir o ingrese ingestas para guardar los cambios.");
+            }
+            else if (!listaConItems && lbxIngestas.Items.Count > 0)
+            {
+                listaConItems = true;
+                MessageBox.Show("Han quedado ingestas sin ingresar. No se agregaran al plan.");
+            }
+            else
+            {
+
+                p.NombrePlan = txtNombrePlan.Text;
+                p.Objetivo = txtObjetivo.Text;
+                p.EdadMin = int.Parse(txtEdadMin.Text);
+                p.EdadMax = int.Parse(txtEdadMax.Text);
+                p.IMCMin = double.Parse(txtIMCMin.Text);
+                p.IMCMax = double.Parse(txtIMCMax.Text);
+
+                if (cbxDuracion.Checked)
+                    p.Duracion = new TimeSpan(int.Parse(txtDias.Text) + int.Parse(txtSemanas.Text) * 7 + int.Parse(txtMeses.Text) * 30, 0, 0, 0);
+                else
+                    p.Duracion = TimeSpan.Zero;
+                PlanDietareo.CategoriaPlan cat = PlanDietareo.CategoriaPlan.CategoriaN;
+                if (cbxCategoria.SelectedIndex == 0) cat = PlanDietareo.CategoriaPlan.Categoria1;
+                if (cbxCategoria.SelectedIndex == 1) cat = PlanDietareo.CategoriaPlan.Categoria2;
+
+                PlanDietareo.FrecuenciaPlan frec = PlanDietareo.FrecuenciaPlan.mensual;
+                if (cbxFrecuencia.SelectedIndex == 0) frec = PlanDietareo.FrecuenciaPlan.diaria;
+                if (cbxFrecuencia.SelectedIndex == 1) frec = PlanDietareo.FrecuenciaPlan.semanal;
+                if (cbxFrecuencia.SelectedIndex == 2) frec = PlanDietareo.FrecuenciaPlan.quincenal;
+                
+                p.Categoria = cat;
+                p.Frecuencia = frec;
+                p.Generico = ckbGenerico.Checked;
+                Sistema.GetSistema().AgregarPlan(p);
+                InicializarPlan();
+            }
         }
     }
 }
