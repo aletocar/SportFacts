@@ -110,19 +110,20 @@ namespace LogicaNegocio
             return "PD-" + max;
         }
 
-        public List<PlanDietareo> ObtenerPlanes(string id)
+        public List<PlanDietareo> ObtenerPlanes(string id, string objetivo, string nombre)
         {
             List<PlanDietareo> ret = new List<PlanDietareo>();
             foreach (PlanDietareo p in PlanesDietareaos)
             {
-                if (p.identificador.Equals(id)) ret.Add(p);
+                if (p.identificador.Contains(id) || p.NombrePlan.Contains(nombre) || p.Objetivo.Contains(objetivo)) ret.Add(p);
             }
             return ret;
         }
 
         public bool PlanNoSirveParaDeportista(Usuario usuario, PlanDietareo planDietareo)
         {
-            return false;
+            if (planDietareo.EdadMax >= (System.DateTime.Now.Year - usuario.FechaNac.Year) && planDietareo.EdadMin <= (System.DateTime.Now.Year - usuario.FechaNac.Year) && planDietareo.IMCMax >= usuario.IMC && planDietareo.IMCMin <= usuario.IMC) return false;
+            else return false;
         }
 
         public Usuario[] ObtenerDeportistas(string nombre, string apellido)

@@ -59,49 +59,6 @@
             this.btnAsignarPlan = new System.Windows.Forms.Button();
             this.btnBorrarPlan = new System.Windows.Forms.Button();
             this.btnCrearPlan = new System.Windows.Forms.Button();
-            this.panelAgregarPlanDietareo = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.idTxt = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtNombrePlan = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cbxFrecuencia = new System.Windows.Forms.ComboBox();
-            this.etqMomento = new System.Windows.Forms.Label();
-            this.cbxMomento = new System.Windows.Forms.ComboBox();
-            this.btnConfirmarIngesta = new System.Windows.Forms.Button();
-            this.txtMeses = new System.Windows.Forms.TextBox();
-            this.txtSemanas = new System.Windows.Forms.TextBox();
-            this.txtDias = new System.Windows.Forms.TextBox();
-            this.etqMeses = new System.Windows.Forms.Label();
-            this.cbxDuracion = new System.Windows.Forms.CheckBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.cbxDia = new System.Windows.Forms.ComboBox();
-            this.btnCrearIngesta = new System.Windows.Forms.Button();
-            this.lbxIngestas = new System.Windows.Forms.ListBox();
-            this.btnAgregarAIngesta = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtValorCalorico = new System.Windows.Forms.TextBox();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.txtAlimento = new System.Windows.Forms.TextBox();
-            this.ckbGenerico = new System.Windows.Forms.CheckBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.cbxCategoria = new System.Windows.Forms.ComboBox();
-            this.etqFechaInicio = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAgregarPlan = new System.Windows.Forms.Button();
-            this.etqFechaFin = new System.Windows.Forms.Label();
-            this.txtIMCMax = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtIMCMin = new System.Windows.Forms.TextBox();
-            this.txtEdadMax = new System.Windows.Forms.TextBox();
-            this.txtEdadMin = new System.Windows.Forms.TextBox();
-            this.txtObjetivo = new System.Windows.Forms.TextBox();
             this.panelBorrarPlan = new System.Windows.Forms.Panel();
             this.listaPlanes = new System.Windows.Forms.ListBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -154,12 +111,57 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.panelAgregarPlanDietareo = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.idTxt = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtNombrePlan = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cbxFrecuencia = new System.Windows.Forms.ComboBox();
+            this.etqMomento = new System.Windows.Forms.Label();
+            this.cbxMomento = new System.Windows.Forms.ComboBox();
+            this.btnConfirmarIngesta = new System.Windows.Forms.Button();
+            this.txtMeses = new System.Windows.Forms.TextBox();
+            this.txtSemanas = new System.Windows.Forms.TextBox();
+            this.txtDias = new System.Windows.Forms.TextBox();
+            this.etqMeses = new System.Windows.Forms.Label();
+            this.cbxDuracion = new System.Windows.Forms.CheckBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.cbxDia = new System.Windows.Forms.ComboBox();
+            this.btnCrearIngesta = new System.Windows.Forms.Button();
+            this.lbxIngestas = new System.Windows.Forms.ListBox();
+            this.btnAgregarAIngesta = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtValorCalorico = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.txtAlimento = new System.Windows.Forms.TextBox();
+            this.ckbGenerico = new System.Windows.Forms.CheckBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cbxCategoria = new System.Windows.Forms.ComboBox();
+            this.etqFechaInicio = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAgregarPlan = new System.Windows.Forms.Button();
+            this.etqFechaFin = new System.Windows.Forms.Label();
+            this.txtIMCMax = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtIMCMin = new System.Windows.Forms.TextBox();
+            this.txtEdadMax = new System.Windows.Forms.TextBox();
+            this.txtEdadMin = new System.Windows.Forms.TextBox();
+            this.txtObjetivo = new System.Windows.Forms.TextBox();
+            this.IMCUsuarioTxt = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
             this.panelInicio.SuspendLayout();
             this.panelAgregarUsuario.SuspendLayout();
             this.panelPlan.SuspendLayout();
-            this.panelAgregarPlanDietareo.SuspendLayout();
             this.panelBorrarPlan.SuspendLayout();
             this.panelAsignarPlan.SuspendLayout();
+            this.panelAgregarPlanDietareo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelInicio
@@ -245,6 +247,8 @@
             // panelAgregarUsuario
             // 
             this.panelAgregarUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelAgregarUsuario.Controls.Add(this.IMCUsuarioTxt);
+            this.panelAgregarUsuario.Controls.Add(this.label42);
             this.panelAgregarUsuario.Controls.Add(this.rBtnTecnico);
             this.panelAgregarUsuario.Controls.Add(this.rBtnDeportista);
             this.panelAgregarUsuario.Controls.Add(this.rBtnMedico);
@@ -353,7 +357,7 @@
             // 
             // txtConfirmar
             // 
-            this.txtConfirmar.Location = new System.Drawing.Point(250, 477);
+            this.txtConfirmar.Location = new System.Drawing.Point(250, 436);
             this.txtConfirmar.Margin = new System.Windows.Forms.Padding(6);
             this.txtConfirmar.Name = "txtConfirmar";
             this.txtConfirmar.PasswordChar = '*';
@@ -362,7 +366,7 @@
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(250, 427);
+            this.txtPass.Location = new System.Drawing.Point(250, 386);
             this.txtPass.Margin = new System.Windows.Forms.Padding(6);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
@@ -372,7 +376,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(70, 475);
+            this.label7.Location = new System.Drawing.Point(70, 434);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(108, 26);
@@ -382,7 +386,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(70, 427);
+            this.label8.Location = new System.Drawing.Point(70, 386);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(124, 26);
@@ -392,7 +396,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(70, 377);
+            this.label5.Location = new System.Drawing.Point(70, 336);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 26);
@@ -402,7 +406,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(70, 333);
+            this.label6.Location = new System.Drawing.Point(70, 292);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 26);
@@ -412,7 +416,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(70, 283);
+            this.label4.Location = new System.Drawing.Point(70, 242);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 26);
@@ -422,7 +426,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(70, 233);
+            this.label3.Location = new System.Drawing.Point(70, 192);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 26);
@@ -431,7 +435,7 @@
             // 
             // txtMail
             // 
-            this.txtMail.Location = new System.Drawing.Point(250, 377);
+            this.txtMail.Location = new System.Drawing.Point(250, 336);
             this.txtMail.Margin = new System.Windows.Forms.Padding(6);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(320, 31);
@@ -439,7 +443,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(250, 327);
+            this.txtUsername.Location = new System.Drawing.Point(250, 286);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(6);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(320, 31);
@@ -447,7 +451,7 @@
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(250, 277);
+            this.txtApellido.Location = new System.Drawing.Point(250, 236);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(6);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(320, 31);
@@ -455,7 +459,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(250, 227);
+            this.txtNombre.Location = new System.Drawing.Point(250, 186);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(6);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(320, 31);
@@ -510,483 +514,6 @@
             this.btnCrearPlan.Text = "Crear Plan";
             this.btnCrearPlan.UseVisualStyleBackColor = true;
             this.btnCrearPlan.Click += new System.EventHandler(this.btnCrearPlan_Click);
-            // 
-            // panelAgregarPlanDietareo
-            // 
-            this.panelAgregarPlanDietareo.Controls.Add(this.label15);
-            this.panelAgregarPlanDietareo.Controls.Add(this.label22);
-            this.panelAgregarPlanDietareo.Controls.Add(this.idTxt);
-            this.panelAgregarPlanDietareo.Controls.Add(this.label11);
-            this.panelAgregarPlanDietareo.Controls.Add(this.txtNombrePlan);
-            this.panelAgregarPlanDietareo.Controls.Add(this.label10);
-            this.panelAgregarPlanDietareo.Controls.Add(this.cbxFrecuencia);
-            this.panelAgregarPlanDietareo.Controls.Add(this.etqMomento);
-            this.panelAgregarPlanDietareo.Controls.Add(this.cbxMomento);
-            this.panelAgregarPlanDietareo.Controls.Add(this.btnConfirmarIngesta);
-            this.panelAgregarPlanDietareo.Controls.Add(this.txtMeses);
-            this.panelAgregarPlanDietareo.Controls.Add(this.txtSemanas);
-            this.panelAgregarPlanDietareo.Controls.Add(this.txtDias);
-            this.panelAgregarPlanDietareo.Controls.Add(this.etqMeses);
-            this.panelAgregarPlanDietareo.Controls.Add(this.cbxDuracion);
-            this.panelAgregarPlanDietareo.Controls.Add(this.label21);
-            this.panelAgregarPlanDietareo.Controls.Add(this.cbxDia);
-            this.panelAgregarPlanDietareo.Controls.Add(this.btnCrearIngesta);
-            this.panelAgregarPlanDietareo.Controls.Add(this.lbxIngestas);
-            this.panelAgregarPlanDietareo.Controls.Add(this.btnAgregarAIngesta);
-            this.panelAgregarPlanDietareo.Controls.Add(this.label18);
-            this.panelAgregarPlanDietareo.Controls.Add(this.label19);
-            this.panelAgregarPlanDietareo.Controls.Add(this.label20);
-            this.panelAgregarPlanDietareo.Controls.Add(this.txtValorCalorico);
-            this.panelAgregarPlanDietareo.Controls.Add(this.txtCantidad);
-            this.panelAgregarPlanDietareo.Controls.Add(this.txtAlimento);
-            this.panelAgregarPlanDietareo.Controls.Add(this.ckbGenerico);
-            this.panelAgregarPlanDietareo.Controls.Add(this.label17);
-            this.panelAgregarPlanDietareo.Controls.Add(this.cbxCategoria);
-            this.panelAgregarPlanDietareo.Controls.Add(this.etqFechaInicio);
-            this.panelAgregarPlanDietareo.Controls.Add(this.btnCancelar);
-            this.panelAgregarPlanDietareo.Controls.Add(this.btnAgregarPlan);
-            this.panelAgregarPlanDietareo.Controls.Add(this.etqFechaFin);
-            this.panelAgregarPlanDietareo.Controls.Add(this.txtIMCMax);
-            this.panelAgregarPlanDietareo.Controls.Add(this.label12);
-            this.panelAgregarPlanDietareo.Controls.Add(this.label13);
-            this.panelAgregarPlanDietareo.Controls.Add(this.label14);
-            this.panelAgregarPlanDietareo.Controls.Add(this.label16);
-            this.panelAgregarPlanDietareo.Controls.Add(this.txtIMCMin);
-            this.panelAgregarPlanDietareo.Controls.Add(this.txtEdadMax);
-            this.panelAgregarPlanDietareo.Controls.Add(this.txtEdadMin);
-            this.panelAgregarPlanDietareo.Controls.Add(this.txtObjetivo);
-            this.panelAgregarPlanDietareo.Location = new System.Drawing.Point(38, 125);
-            this.panelAgregarPlanDietareo.Name = "panelAgregarPlanDietareo";
-            this.panelAgregarPlanDietareo.Size = new System.Drawing.Size(1025, 611);
-            this.panelAgregarPlanDietareo.TabIndex = 3;
-            this.panelAgregarPlanDietareo.Visible = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 128);
-            this.label15.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(140, 26);
-            this.label15.TabIndex = 73;
-            this.label15.Text = "Edad Minima";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Enabled = false;
-            this.label22.Location = new System.Drawing.Point(562, 30);
-            this.label22.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(130, 26);
-            this.label22.TabIndex = 109;
-            this.label22.Text = "Identificador";
-            // 
-            // idTxt
-            // 
-            this.idTxt.Enabled = false;
-            this.idTxt.Location = new System.Drawing.Point(742, 24);
-            this.idTxt.Margin = new System.Windows.Forms.Padding(6);
-            this.idTxt.Name = "idTxt";
-            this.idTxt.Size = new System.Drawing.Size(246, 31);
-            this.idTxt.TabIndex = 108;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 30);
-            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(140, 26);
-            this.label11.TabIndex = 107;
-            this.label11.Text = "Nombre Plan";
-            // 
-            // txtNombrePlan
-            // 
-            this.txtNombrePlan.Location = new System.Drawing.Point(186, 24);
-            this.txtNombrePlan.Margin = new System.Windows.Forms.Padding(6);
-            this.txtNombrePlan.Name = "txtNombrePlan";
-            this.txtNombrePlan.Size = new System.Drawing.Size(320, 31);
-            this.txtNombrePlan.TabIndex = 106;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(574, 458);
-            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(119, 26);
-            this.label10.TabIndex = 105;
-            this.label10.Text = "Frecuencia";
-            // 
-            // cbxFrecuencia
-            // 
-            this.cbxFrecuencia.FormattingEnabled = true;
-            this.cbxFrecuencia.Items.AddRange(new object[] {
-            "Diaria",
-            "Semanal",
-            "Quincenal",
-            "Mensual"});
-            this.cbxFrecuencia.Location = new System.Drawing.Point(762, 453);
-            this.cbxFrecuencia.Margin = new System.Windows.Forms.Padding(6);
-            this.cbxFrecuencia.Name = "cbxFrecuencia";
-            this.cbxFrecuencia.Size = new System.Drawing.Size(238, 33);
-            this.cbxFrecuencia.TabIndex = 104;
-            // 
-            // etqMomento
-            // 
-            this.etqMomento.AutoSize = true;
-            this.etqMomento.Location = new System.Drawing.Point(818, 358);
-            this.etqMomento.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.etqMomento.Name = "etqMomento";
-            this.etqMomento.Size = new System.Drawing.Size(103, 26);
-            this.etqMomento.TabIndex = 103;
-            this.etqMomento.Text = "Momento";
-            // 
-            // cbxMomento
-            // 
-            this.cbxMomento.FormattingEnabled = true;
-            this.cbxMomento.Items.AddRange(new object[] {
-            "mañana",
-            "media_mañana",
-            "almuerzo",
-            "media_tarde",
-            "tarde",
-            "noche"});
-            this.cbxMomento.Location = new System.Drawing.Point(824, 389);
-            this.cbxMomento.Margin = new System.Windows.Forms.Padding(6);
-            this.cbxMomento.Name = "cbxMomento";
-            this.cbxMomento.Size = new System.Drawing.Size(176, 33);
-            this.cbxMomento.TabIndex = 102;
-            // 
-            // btnConfirmarIngesta
-            // 
-            this.btnConfirmarIngesta.Location = new System.Drawing.Point(580, 551);
-            this.btnConfirmarIngesta.Margin = new System.Windows.Forms.Padding(6);
-            this.btnConfirmarIngesta.Name = "btnConfirmarIngesta";
-            this.btnConfirmarIngesta.Size = new System.Drawing.Size(232, 44);
-            this.btnConfirmarIngesta.TabIndex = 101;
-            this.btnConfirmarIngesta.Text = "Confirmar Ingesta";
-            this.btnConfirmarIngesta.UseVisualStyleBackColor = true;
-            this.btnConfirmarIngesta.Click += new System.EventHandler(this.btnConfirmarIngesta_Click_1);
-            // 
-            // txtMeses
-            // 
-            this.txtMeses.Location = new System.Drawing.Point(392, 372);
-            this.txtMeses.Margin = new System.Windows.Forms.Padding(6);
-            this.txtMeses.Name = "txtMeses";
-            this.txtMeses.Size = new System.Drawing.Size(114, 31);
-            this.txtMeses.TabIndex = 100;
-            // 
-            // txtSemanas
-            // 
-            this.txtSemanas.Location = new System.Drawing.Point(194, 368);
-            this.txtSemanas.Margin = new System.Windows.Forms.Padding(6);
-            this.txtSemanas.Name = "txtSemanas";
-            this.txtSemanas.Size = new System.Drawing.Size(114, 31);
-            this.txtSemanas.TabIndex = 99;
-            // 
-            // txtDias
-            // 
-            this.txtDias.Location = new System.Drawing.Point(12, 368);
-            this.txtDias.Margin = new System.Windows.Forms.Padding(6);
-            this.txtDias.Name = "txtDias";
-            this.txtDias.Size = new System.Drawing.Size(114, 31);
-            this.txtDias.TabIndex = 98;
-            // 
-            // etqMeses
-            // 
-            this.etqMeses.AutoSize = true;
-            this.etqMeses.Location = new System.Drawing.Point(402, 337);
-            this.etqMeses.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.etqMeses.Name = "etqMeses";
-            this.etqMeses.Size = new System.Drawing.Size(76, 26);
-            this.etqMeses.TabIndex = 97;
-            this.etqMeses.Text = "Meses";
-            // 
-            // cbxDuracion
-            // 
-            this.cbxDuracion.AutoSize = true;
-            this.cbxDuracion.Checked = true;
-            this.cbxDuracion.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxDuracion.Location = new System.Drawing.Point(30, 483);
-            this.cbxDuracion.Margin = new System.Windows.Forms.Padding(6);
-            this.cbxDuracion.Name = "cbxDuracion";
-            this.cbxDuracion.Size = new System.Drawing.Size(125, 30);
-            this.cbxDuracion.TabIndex = 96;
-            this.cbxDuracion.Text = "Duracion";
-            this.cbxDuracion.UseVisualStyleBackColor = true;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(818, 285);
-            this.label21.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(45, 26);
-            this.label21.TabIndex = 95;
-            this.label21.Text = "Dia";
-            // 
-            // cbxDia
-            // 
-            this.cbxDia.FormattingEnabled = true;
-            this.cbxDia.Items.AddRange(new object[] {
-            "Lunes",
-            "Martes",
-            "Miercoles",
-            "Jueves",
-            "Viernes",
-            "Sabado",
-            "Domingo"});
-            this.cbxDia.Location = new System.Drawing.Point(824, 312);
-            this.cbxDia.Margin = new System.Windows.Forms.Padding(6);
-            this.cbxDia.Name = "cbxDia";
-            this.cbxDia.Size = new System.Drawing.Size(176, 33);
-            this.cbxDia.TabIndex = 94;
-            // 
-            // btnCrearIngesta
-            // 
-            this.btnCrearIngesta.Location = new System.Drawing.Point(574, 222);
-            this.btnCrearIngesta.Margin = new System.Windows.Forms.Padding(6);
-            this.btnCrearIngesta.Name = "btnCrearIngesta";
-            this.btnCrearIngesta.Size = new System.Drawing.Size(204, 44);
-            this.btnCrearIngesta.TabIndex = 93;
-            this.btnCrearIngesta.Text = "Crear Ingesta";
-            this.btnCrearIngesta.UseVisualStyleBackColor = true;
-            this.btnCrearIngesta.Click += new System.EventHandler(this.btnCrearIngesta_Click_1);
-            // 
-            // lbxIngestas
-            // 
-            this.lbxIngestas.FormattingEnabled = true;
-            this.lbxIngestas.ItemHeight = 25;
-            this.lbxIngestas.Location = new System.Drawing.Point(574, 283);
-            this.lbxIngestas.Margin = new System.Windows.Forms.Padding(6);
-            this.lbxIngestas.Name = "lbxIngestas";
-            this.lbxIngestas.Size = new System.Drawing.Size(228, 154);
-            this.lbxIngestas.TabIndex = 92;
-            // 
-            // btnAgregarAIngesta
-            // 
-            this.btnAgregarAIngesta.Location = new System.Drawing.Point(790, 222);
-            this.btnAgregarAIngesta.Margin = new System.Windows.Forms.Padding(6);
-            this.btnAgregarAIngesta.Name = "btnAgregarAIngesta";
-            this.btnAgregarAIngesta.Size = new System.Drawing.Size(202, 44);
-            this.btnAgregarAIngesta.TabIndex = 91;
-            this.btnAgregarAIngesta.Text = "Agregar a Ingesta";
-            this.btnAgregarAIngesta.UseVisualStyleBackColor = true;
-            this.btnAgregarAIngesta.Click += new System.EventHandler(this.btnAgregarAIngesta_Click_1);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(574, 178);
-            this.label18.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(149, 26);
-            this.label18.TabIndex = 90;
-            this.label18.Text = "Valor Calorico";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(574, 128);
-            this.label19.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(99, 26);
-            this.label19.TabIndex = 89;
-            this.label19.Text = "Cantidad";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(574, 83);
-            this.label20.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(98, 26);
-            this.label20.TabIndex = 88;
-            this.label20.Text = "Alimento";
-            // 
-            // txtValorCalorico
-            // 
-            this.txtValorCalorico.Location = new System.Drawing.Point(742, 172);
-            this.txtValorCalorico.Margin = new System.Windows.Forms.Padding(6);
-            this.txtValorCalorico.Name = "txtValorCalorico";
-            this.txtValorCalorico.Size = new System.Drawing.Size(246, 31);
-            this.txtValorCalorico.TabIndex = 87;
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(742, 122);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(6);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(246, 31);
-            this.txtCantidad.TabIndex = 86;
-            // 
-            // txtAlimento
-            // 
-            this.txtAlimento.Location = new System.Drawing.Point(742, 72);
-            this.txtAlimento.Margin = new System.Windows.Forms.Padding(6);
-            this.txtAlimento.Name = "txtAlimento";
-            this.txtAlimento.Size = new System.Drawing.Size(246, 31);
-            this.txtAlimento.TabIndex = 85;
-            // 
-            // ckbGenerico
-            // 
-            this.ckbGenerico.AutoSize = true;
-            this.ckbGenerico.Checked = true;
-            this.ckbGenerico.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckbGenerico.Location = new System.Drawing.Point(360, 483);
-            this.ckbGenerico.Margin = new System.Windows.Forms.Padding(6);
-            this.ckbGenerico.Name = "ckbGenerico";
-            this.ckbGenerico.Size = new System.Drawing.Size(126, 30);
-            this.ckbGenerico.TabIndex = 84;
-            this.ckbGenerico.Text = "Generico";
-            this.ckbGenerico.UseVisualStyleBackColor = true;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 428);
-            this.label17.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(106, 26);
-            this.label17.TabIndex = 83;
-            this.label17.Text = "Categoria";
-            // 
-            // cbxCategoria
-            // 
-            this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Items.AddRange(new object[] {
-            "Categoria1",
-            "Categoria2",
-            "CategoriaN"});
-            this.cbxCategoria.Location = new System.Drawing.Point(194, 422);
-            this.cbxCategoria.Margin = new System.Windows.Forms.Padding(6);
-            this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(312, 33);
-            this.cbxCategoria.TabIndex = 82;
-            // 
-            // etqFechaInicio
-            // 
-            this.etqFechaInicio.AutoSize = true;
-            this.etqFechaInicio.Location = new System.Drawing.Point(6, 335);
-            this.etqFechaInicio.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.etqFechaInicio.Name = "etqFechaInicio";
-            this.etqFechaInicio.Size = new System.Drawing.Size(56, 26);
-            this.etqFechaInicio.TabIndex = 81;
-            this.etqFechaInicio.Text = "Dias";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(158, 551);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(6);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(150, 44);
-            this.btnCancelar.TabIndex = 80;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnAgregarPlan
-            // 
-            this.btnAgregarPlan.Location = new System.Drawing.Point(360, 551);
-            this.btnAgregarPlan.Margin = new System.Windows.Forms.Padding(6);
-            this.btnAgregarPlan.Name = "btnAgregarPlan";
-            this.btnAgregarPlan.Size = new System.Drawing.Size(150, 44);
-            this.btnAgregarPlan.TabIndex = 79;
-            this.btnAgregarPlan.Text = "Agregar";
-            this.btnAgregarPlan.UseVisualStyleBackColor = true;
-            this.btnAgregarPlan.Click += new System.EventHandler(this.btnAgregarPlan_Click_1);
-            // 
-            // etqFechaFin
-            // 
-            this.etqFechaFin.AutoSize = true;
-            this.etqFechaFin.Location = new System.Drawing.Point(200, 337);
-            this.etqFechaFin.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.etqFechaFin.Name = "etqFechaFin";
-            this.etqFechaFin.Size = new System.Drawing.Size(105, 26);
-            this.etqFechaFin.TabIndex = 78;
-            this.etqFechaFin.Text = "Semanas";
-            // 
-            // txtIMCMax
-            // 
-            this.txtIMCMax.Location = new System.Drawing.Point(186, 272);
-            this.txtIMCMax.Margin = new System.Windows.Forms.Padding(6);
-            this.txtIMCMax.Name = "txtIMCMax";
-            this.txtIMCMax.Size = new System.Drawing.Size(320, 31);
-            this.txtIMCMax.TabIndex = 77;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 272);
-            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(135, 26);
-            this.label12.TabIndex = 76;
-            this.label12.Text = "IMC Maxima";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 222);
-            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(129, 26);
-            this.label13.TabIndex = 75;
-            this.label13.Text = "IMC Minima";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 178);
-            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(146, 26);
-            this.label14.TabIndex = 74;
-            this.label14.Text = "Edad Maxima";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 78);
-            this.label16.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(92, 26);
-            this.label16.TabIndex = 72;
-            this.label16.Text = "Objetivo";
-            // 
-            // txtIMCMin
-            // 
-            this.txtIMCMin.Location = new System.Drawing.Point(186, 222);
-            this.txtIMCMin.Margin = new System.Windows.Forms.Padding(6);
-            this.txtIMCMin.Name = "txtIMCMin";
-            this.txtIMCMin.Size = new System.Drawing.Size(320, 31);
-            this.txtIMCMin.TabIndex = 71;
-            // 
-            // txtEdadMax
-            // 
-            this.txtEdadMax.Location = new System.Drawing.Point(186, 172);
-            this.txtEdadMax.Margin = new System.Windows.Forms.Padding(6);
-            this.txtEdadMax.Name = "txtEdadMax";
-            this.txtEdadMax.Size = new System.Drawing.Size(320, 31);
-            this.txtEdadMax.TabIndex = 70;
-            // 
-            // txtEdadMin
-            // 
-            this.txtEdadMin.Location = new System.Drawing.Point(186, 122);
-            this.txtEdadMin.Margin = new System.Windows.Forms.Padding(6);
-            this.txtEdadMin.Name = "txtEdadMin";
-            this.txtEdadMin.Size = new System.Drawing.Size(320, 31);
-            this.txtEdadMin.TabIndex = 69;
-            // 
-            // txtObjetivo
-            // 
-            this.txtObjetivo.Location = new System.Drawing.Point(186, 72);
-            this.txtObjetivo.Margin = new System.Windows.Forms.Padding(6);
-            this.txtObjetivo.Name = "txtObjetivo";
-            this.txtObjetivo.Size = new System.Drawing.Size(320, 31);
-            this.txtObjetivo.TabIndex = 68;
             // 
             // panelBorrarPlan
             // 
@@ -1541,13 +1068,509 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // panelAgregarPlanDietareo
+            // 
+            this.panelAgregarPlanDietareo.Controls.Add(this.label15);
+            this.panelAgregarPlanDietareo.Controls.Add(this.label22);
+            this.panelAgregarPlanDietareo.Controls.Add(this.idTxt);
+            this.panelAgregarPlanDietareo.Controls.Add(this.label11);
+            this.panelAgregarPlanDietareo.Controls.Add(this.txtNombrePlan);
+            this.panelAgregarPlanDietareo.Controls.Add(this.label10);
+            this.panelAgregarPlanDietareo.Controls.Add(this.cbxFrecuencia);
+            this.panelAgregarPlanDietareo.Controls.Add(this.etqMomento);
+            this.panelAgregarPlanDietareo.Controls.Add(this.cbxMomento);
+            this.panelAgregarPlanDietareo.Controls.Add(this.btnConfirmarIngesta);
+            this.panelAgregarPlanDietareo.Controls.Add(this.txtMeses);
+            this.panelAgregarPlanDietareo.Controls.Add(this.txtSemanas);
+            this.panelAgregarPlanDietareo.Controls.Add(this.txtDias);
+            this.panelAgregarPlanDietareo.Controls.Add(this.etqMeses);
+            this.panelAgregarPlanDietareo.Controls.Add(this.cbxDuracion);
+            this.panelAgregarPlanDietareo.Controls.Add(this.label21);
+            this.panelAgregarPlanDietareo.Controls.Add(this.cbxDia);
+            this.panelAgregarPlanDietareo.Controls.Add(this.btnCrearIngesta);
+            this.panelAgregarPlanDietareo.Controls.Add(this.lbxIngestas);
+            this.panelAgregarPlanDietareo.Controls.Add(this.btnAgregarAIngesta);
+            this.panelAgregarPlanDietareo.Controls.Add(this.label18);
+            this.panelAgregarPlanDietareo.Controls.Add(this.label19);
+            this.panelAgregarPlanDietareo.Controls.Add(this.label20);
+            this.panelAgregarPlanDietareo.Controls.Add(this.txtValorCalorico);
+            this.panelAgregarPlanDietareo.Controls.Add(this.txtCantidad);
+            this.panelAgregarPlanDietareo.Controls.Add(this.txtAlimento);
+            this.panelAgregarPlanDietareo.Controls.Add(this.ckbGenerico);
+            this.panelAgregarPlanDietareo.Controls.Add(this.label17);
+            this.panelAgregarPlanDietareo.Controls.Add(this.cbxCategoria);
+            this.panelAgregarPlanDietareo.Controls.Add(this.etqFechaInicio);
+            this.panelAgregarPlanDietareo.Controls.Add(this.btnCancelar);
+            this.panelAgregarPlanDietareo.Controls.Add(this.btnAgregarPlan);
+            this.panelAgregarPlanDietareo.Controls.Add(this.etqFechaFin);
+            this.panelAgregarPlanDietareo.Controls.Add(this.txtIMCMax);
+            this.panelAgregarPlanDietareo.Controls.Add(this.label12);
+            this.panelAgregarPlanDietareo.Controls.Add(this.label13);
+            this.panelAgregarPlanDietareo.Controls.Add(this.label14);
+            this.panelAgregarPlanDietareo.Controls.Add(this.label16);
+            this.panelAgregarPlanDietareo.Controls.Add(this.txtIMCMin);
+            this.panelAgregarPlanDietareo.Controls.Add(this.txtEdadMax);
+            this.panelAgregarPlanDietareo.Controls.Add(this.txtEdadMin);
+            this.panelAgregarPlanDietareo.Controls.Add(this.txtObjetivo);
+            this.panelAgregarPlanDietareo.Location = new System.Drawing.Point(38, 125);
+            this.panelAgregarPlanDietareo.Name = "panelAgregarPlanDietareo";
+            this.panelAgregarPlanDietareo.Size = new System.Drawing.Size(1025, 611);
+            this.panelAgregarPlanDietareo.TabIndex = 3;
+            this.panelAgregarPlanDietareo.Visible = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 128);
+            this.label15.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(140, 26);
+            this.label15.TabIndex = 73;
+            this.label15.Text = "Edad Minima";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Enabled = false;
+            this.label22.Location = new System.Drawing.Point(562, 30);
+            this.label22.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(130, 26);
+            this.label22.TabIndex = 109;
+            this.label22.Text = "Identificador";
+            // 
+            // idTxt
+            // 
+            this.idTxt.Enabled = false;
+            this.idTxt.Location = new System.Drawing.Point(742, 24);
+            this.idTxt.Margin = new System.Windows.Forms.Padding(6);
+            this.idTxt.Name = "idTxt";
+            this.idTxt.Size = new System.Drawing.Size(246, 31);
+            this.idTxt.TabIndex = 108;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 30);
+            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(140, 26);
+            this.label11.TabIndex = 107;
+            this.label11.Text = "Nombre Plan";
+            // 
+            // txtNombrePlan
+            // 
+            this.txtNombrePlan.Location = new System.Drawing.Point(186, 24);
+            this.txtNombrePlan.Margin = new System.Windows.Forms.Padding(6);
+            this.txtNombrePlan.Name = "txtNombrePlan";
+            this.txtNombrePlan.Size = new System.Drawing.Size(320, 31);
+            this.txtNombrePlan.TabIndex = 106;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(574, 458);
+            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(119, 26);
+            this.label10.TabIndex = 105;
+            this.label10.Text = "Frecuencia";
+            // 
+            // cbxFrecuencia
+            // 
+            this.cbxFrecuencia.FormattingEnabled = true;
+            this.cbxFrecuencia.Items.AddRange(new object[] {
+            "Diaria",
+            "Semanal",
+            "Quincenal",
+            "Mensual"});
+            this.cbxFrecuencia.Location = new System.Drawing.Point(762, 453);
+            this.cbxFrecuencia.Margin = new System.Windows.Forms.Padding(6);
+            this.cbxFrecuencia.Name = "cbxFrecuencia";
+            this.cbxFrecuencia.Size = new System.Drawing.Size(238, 33);
+            this.cbxFrecuencia.TabIndex = 104;
+            // 
+            // etqMomento
+            // 
+            this.etqMomento.AutoSize = true;
+            this.etqMomento.Location = new System.Drawing.Point(818, 358);
+            this.etqMomento.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.etqMomento.Name = "etqMomento";
+            this.etqMomento.Size = new System.Drawing.Size(103, 26);
+            this.etqMomento.TabIndex = 103;
+            this.etqMomento.Text = "Momento";
+            // 
+            // cbxMomento
+            // 
+            this.cbxMomento.FormattingEnabled = true;
+            this.cbxMomento.Items.AddRange(new object[] {
+            "mañana",
+            "media_mañana",
+            "almuerzo",
+            "media_tarde",
+            "tarde",
+            "noche"});
+            this.cbxMomento.Location = new System.Drawing.Point(824, 389);
+            this.cbxMomento.Margin = new System.Windows.Forms.Padding(6);
+            this.cbxMomento.Name = "cbxMomento";
+            this.cbxMomento.Size = new System.Drawing.Size(176, 33);
+            this.cbxMomento.TabIndex = 102;
+            // 
+            // btnConfirmarIngesta
+            // 
+            this.btnConfirmarIngesta.Location = new System.Drawing.Point(580, 551);
+            this.btnConfirmarIngesta.Margin = new System.Windows.Forms.Padding(6);
+            this.btnConfirmarIngesta.Name = "btnConfirmarIngesta";
+            this.btnConfirmarIngesta.Size = new System.Drawing.Size(232, 44);
+            this.btnConfirmarIngesta.TabIndex = 101;
+            this.btnConfirmarIngesta.Text = "Confirmar Ingesta";
+            this.btnConfirmarIngesta.UseVisualStyleBackColor = true;
+            this.btnConfirmarIngesta.Click += new System.EventHandler(this.btnConfirmarIngesta_Click_1);
+            // 
+            // txtMeses
+            // 
+            this.txtMeses.Location = new System.Drawing.Point(392, 372);
+            this.txtMeses.Margin = new System.Windows.Forms.Padding(6);
+            this.txtMeses.Name = "txtMeses";
+            this.txtMeses.Size = new System.Drawing.Size(114, 31);
+            this.txtMeses.TabIndex = 100;
+            // 
+            // txtSemanas
+            // 
+            this.txtSemanas.Location = new System.Drawing.Point(194, 368);
+            this.txtSemanas.Margin = new System.Windows.Forms.Padding(6);
+            this.txtSemanas.Name = "txtSemanas";
+            this.txtSemanas.Size = new System.Drawing.Size(114, 31);
+            this.txtSemanas.TabIndex = 99;
+            // 
+            // txtDias
+            // 
+            this.txtDias.Location = new System.Drawing.Point(12, 368);
+            this.txtDias.Margin = new System.Windows.Forms.Padding(6);
+            this.txtDias.Name = "txtDias";
+            this.txtDias.Size = new System.Drawing.Size(114, 31);
+            this.txtDias.TabIndex = 98;
+            // 
+            // etqMeses
+            // 
+            this.etqMeses.AutoSize = true;
+            this.etqMeses.Location = new System.Drawing.Point(402, 337);
+            this.etqMeses.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.etqMeses.Name = "etqMeses";
+            this.etqMeses.Size = new System.Drawing.Size(76, 26);
+            this.etqMeses.TabIndex = 97;
+            this.etqMeses.Text = "Meses";
+            // 
+            // cbxDuracion
+            // 
+            this.cbxDuracion.AutoSize = true;
+            this.cbxDuracion.Checked = true;
+            this.cbxDuracion.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxDuracion.Location = new System.Drawing.Point(30, 483);
+            this.cbxDuracion.Margin = new System.Windows.Forms.Padding(6);
+            this.cbxDuracion.Name = "cbxDuracion";
+            this.cbxDuracion.Size = new System.Drawing.Size(125, 30);
+            this.cbxDuracion.TabIndex = 96;
+            this.cbxDuracion.Text = "Duracion";
+            this.cbxDuracion.UseVisualStyleBackColor = true;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(818, 285);
+            this.label21.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(45, 26);
+            this.label21.TabIndex = 95;
+            this.label21.Text = "Dia";
+            // 
+            // cbxDia
+            // 
+            this.cbxDia.FormattingEnabled = true;
+            this.cbxDia.Items.AddRange(new object[] {
+            "Lunes",
+            "Martes",
+            "Miercoles",
+            "Jueves",
+            "Viernes",
+            "Sabado",
+            "Domingo"});
+            this.cbxDia.Location = new System.Drawing.Point(824, 312);
+            this.cbxDia.Margin = new System.Windows.Forms.Padding(6);
+            this.cbxDia.Name = "cbxDia";
+            this.cbxDia.Size = new System.Drawing.Size(176, 33);
+            this.cbxDia.TabIndex = 94;
+            // 
+            // btnCrearIngesta
+            // 
+            this.btnCrearIngesta.Location = new System.Drawing.Point(574, 222);
+            this.btnCrearIngesta.Margin = new System.Windows.Forms.Padding(6);
+            this.btnCrearIngesta.Name = "btnCrearIngesta";
+            this.btnCrearIngesta.Size = new System.Drawing.Size(204, 44);
+            this.btnCrearIngesta.TabIndex = 93;
+            this.btnCrearIngesta.Text = "Crear Ingesta";
+            this.btnCrearIngesta.UseVisualStyleBackColor = true;
+            this.btnCrearIngesta.Click += new System.EventHandler(this.btnCrearIngesta_Click_1);
+            // 
+            // lbxIngestas
+            // 
+            this.lbxIngestas.FormattingEnabled = true;
+            this.lbxIngestas.ItemHeight = 25;
+            this.lbxIngestas.Location = new System.Drawing.Point(574, 283);
+            this.lbxIngestas.Margin = new System.Windows.Forms.Padding(6);
+            this.lbxIngestas.Name = "lbxIngestas";
+            this.lbxIngestas.Size = new System.Drawing.Size(228, 154);
+            this.lbxIngestas.TabIndex = 92;
+            // 
+            // btnAgregarAIngesta
+            // 
+            this.btnAgregarAIngesta.Location = new System.Drawing.Point(790, 222);
+            this.btnAgregarAIngesta.Margin = new System.Windows.Forms.Padding(6);
+            this.btnAgregarAIngesta.Name = "btnAgregarAIngesta";
+            this.btnAgregarAIngesta.Size = new System.Drawing.Size(202, 44);
+            this.btnAgregarAIngesta.TabIndex = 91;
+            this.btnAgregarAIngesta.Text = "Agregar a Ingesta";
+            this.btnAgregarAIngesta.UseVisualStyleBackColor = true;
+            this.btnAgregarAIngesta.Click += new System.EventHandler(this.btnAgregarAIngesta_Click_1);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(574, 178);
+            this.label18.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(149, 26);
+            this.label18.TabIndex = 90;
+            this.label18.Text = "Valor Calorico";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(574, 128);
+            this.label19.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(99, 26);
+            this.label19.TabIndex = 89;
+            this.label19.Text = "Cantidad";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(574, 83);
+            this.label20.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(98, 26);
+            this.label20.TabIndex = 88;
+            this.label20.Text = "Alimento";
+            // 
+            // txtValorCalorico
+            // 
+            this.txtValorCalorico.Location = new System.Drawing.Point(742, 172);
+            this.txtValorCalorico.Margin = new System.Windows.Forms.Padding(6);
+            this.txtValorCalorico.Name = "txtValorCalorico";
+            this.txtValorCalorico.Size = new System.Drawing.Size(246, 31);
+            this.txtValorCalorico.TabIndex = 87;
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(742, 122);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(6);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(246, 31);
+            this.txtCantidad.TabIndex = 86;
+            // 
+            // txtAlimento
+            // 
+            this.txtAlimento.Location = new System.Drawing.Point(742, 72);
+            this.txtAlimento.Margin = new System.Windows.Forms.Padding(6);
+            this.txtAlimento.Name = "txtAlimento";
+            this.txtAlimento.Size = new System.Drawing.Size(246, 31);
+            this.txtAlimento.TabIndex = 85;
+            // 
+            // ckbGenerico
+            // 
+            this.ckbGenerico.AutoSize = true;
+            this.ckbGenerico.Checked = true;
+            this.ckbGenerico.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckbGenerico.Location = new System.Drawing.Point(360, 483);
+            this.ckbGenerico.Margin = new System.Windows.Forms.Padding(6);
+            this.ckbGenerico.Name = "ckbGenerico";
+            this.ckbGenerico.Size = new System.Drawing.Size(126, 30);
+            this.ckbGenerico.TabIndex = 84;
+            this.ckbGenerico.Text = "Generico";
+            this.ckbGenerico.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 428);
+            this.label17.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(106, 26);
+            this.label17.TabIndex = 83;
+            this.label17.Text = "Categoria";
+            // 
+            // cbxCategoria
+            // 
+            this.cbxCategoria.FormattingEnabled = true;
+            this.cbxCategoria.Items.AddRange(new object[] {
+            "Categoria1",
+            "Categoria2",
+            "CategoriaN"});
+            this.cbxCategoria.Location = new System.Drawing.Point(194, 422);
+            this.cbxCategoria.Margin = new System.Windows.Forms.Padding(6);
+            this.cbxCategoria.Name = "cbxCategoria";
+            this.cbxCategoria.Size = new System.Drawing.Size(312, 33);
+            this.cbxCategoria.TabIndex = 82;
+            // 
+            // etqFechaInicio
+            // 
+            this.etqFechaInicio.AutoSize = true;
+            this.etqFechaInicio.Location = new System.Drawing.Point(6, 335);
+            this.etqFechaInicio.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.etqFechaInicio.Name = "etqFechaInicio";
+            this.etqFechaInicio.Size = new System.Drawing.Size(56, 26);
+            this.etqFechaInicio.TabIndex = 81;
+            this.etqFechaInicio.Text = "Dias";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(158, 551);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(6);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(150, 44);
+            this.btnCancelar.TabIndex = 80;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnAgregarPlan
+            // 
+            this.btnAgregarPlan.Location = new System.Drawing.Point(360, 551);
+            this.btnAgregarPlan.Margin = new System.Windows.Forms.Padding(6);
+            this.btnAgregarPlan.Name = "btnAgregarPlan";
+            this.btnAgregarPlan.Size = new System.Drawing.Size(150, 44);
+            this.btnAgregarPlan.TabIndex = 79;
+            this.btnAgregarPlan.Text = "Agregar";
+            this.btnAgregarPlan.UseVisualStyleBackColor = true;
+            this.btnAgregarPlan.Click += new System.EventHandler(this.btnAgregarPlan_Click_1);
+            // 
+            // etqFechaFin
+            // 
+            this.etqFechaFin.AutoSize = true;
+            this.etqFechaFin.Location = new System.Drawing.Point(200, 337);
+            this.etqFechaFin.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.etqFechaFin.Name = "etqFechaFin";
+            this.etqFechaFin.Size = new System.Drawing.Size(105, 26);
+            this.etqFechaFin.TabIndex = 78;
+            this.etqFechaFin.Text = "Semanas";
+            // 
+            // txtIMCMax
+            // 
+            this.txtIMCMax.Location = new System.Drawing.Point(186, 272);
+            this.txtIMCMax.Margin = new System.Windows.Forms.Padding(6);
+            this.txtIMCMax.Name = "txtIMCMax";
+            this.txtIMCMax.Size = new System.Drawing.Size(320, 31);
+            this.txtIMCMax.TabIndex = 77;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 272);
+            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(135, 26);
+            this.label12.TabIndex = 76;
+            this.label12.Text = "IMC Maxima";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 222);
+            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(129, 26);
+            this.label13.TabIndex = 75;
+            this.label13.Text = "IMC Minima";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 178);
+            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(146, 26);
+            this.label14.TabIndex = 74;
+            this.label14.Text = "Edad Maxima";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 78);
+            this.label16.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(92, 26);
+            this.label16.TabIndex = 72;
+            this.label16.Text = "Objetivo";
+            // 
+            // txtIMCMin
+            // 
+            this.txtIMCMin.Location = new System.Drawing.Point(186, 222);
+            this.txtIMCMin.Margin = new System.Windows.Forms.Padding(6);
+            this.txtIMCMin.Name = "txtIMCMin";
+            this.txtIMCMin.Size = new System.Drawing.Size(320, 31);
+            this.txtIMCMin.TabIndex = 71;
+            // 
+            // txtEdadMax
+            // 
+            this.txtEdadMax.Location = new System.Drawing.Point(186, 172);
+            this.txtEdadMax.Margin = new System.Windows.Forms.Padding(6);
+            this.txtEdadMax.Name = "txtEdadMax";
+            this.txtEdadMax.Size = new System.Drawing.Size(320, 31);
+            this.txtEdadMax.TabIndex = 70;
+            // 
+            // txtEdadMin
+            // 
+            this.txtEdadMin.Location = new System.Drawing.Point(186, 122);
+            this.txtEdadMin.Margin = new System.Windows.Forms.Padding(6);
+            this.txtEdadMin.Name = "txtEdadMin";
+            this.txtEdadMin.Size = new System.Drawing.Size(320, 31);
+            this.txtEdadMin.TabIndex = 69;
+            // 
+            // txtObjetivo
+            // 
+            this.txtObjetivo.Location = new System.Drawing.Point(186, 72);
+            this.txtObjetivo.Margin = new System.Windows.Forms.Padding(6);
+            this.txtObjetivo.Name = "txtObjetivo";
+            this.txtObjetivo.Size = new System.Drawing.Size(320, 31);
+            this.txtObjetivo.TabIndex = 68;
+            // 
+            // IMCUsuarioTxt
+            // 
+            this.IMCUsuarioTxt.Location = new System.Drawing.Point(250, 479);
+            this.IMCUsuarioTxt.Margin = new System.Windows.Forms.Padding(6);
+            this.IMCUsuarioTxt.Name = "IMCUsuarioTxt";
+            this.IMCUsuarioTxt.PasswordChar = '*';
+            this.IMCUsuarioTxt.Size = new System.Drawing.Size(320, 31);
+            this.IMCUsuarioTxt.TabIndex = 19;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(70, 477);
+            this.label42.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(52, 26);
+            this.label42.TabIndex = 18;
+            this.label42.Text = "IMC";
+            // 
             // VentanaInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2016, 1402);
-            this.Controls.Add(this.panelPlan);
             this.Controls.Add(this.panelAgregarUsuario);
+            this.Controls.Add(this.panelPlan);
             this.Controls.Add(this.panelInicio);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "VentanaInicio";
@@ -1557,12 +1580,12 @@
             this.panelAgregarUsuario.ResumeLayout(false);
             this.panelAgregarUsuario.PerformLayout();
             this.panelPlan.ResumeLayout(false);
-            this.panelAgregarPlanDietareo.ResumeLayout(false);
-            this.panelAgregarPlanDietareo.PerformLayout();
             this.panelBorrarPlan.ResumeLayout(false);
             this.panelBorrarPlan.PerformLayout();
             this.panelAsignarPlan.ResumeLayout(false);
             this.panelAsignarPlan.PerformLayout();
+            this.panelAgregarPlanDietareo.ResumeLayout(false);
+            this.panelAgregarPlanDietareo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1695,6 +1718,8 @@
         private System.Windows.Forms.RadioButton rbtnPrincipal;
         private System.Windows.Forms.RadioButton rbtnSecundario;
         private System.Windows.Forms.Button btnAsignarPlan;
+        private System.Windows.Forms.TextBox IMCUsuarioTxt;
+        private System.Windows.Forms.Label label42;
 
     }
 }

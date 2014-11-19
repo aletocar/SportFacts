@@ -102,7 +102,10 @@ namespace SportFacts
             u.Password = txtPass.Text;
             u.FechaNac = dtpFechaNac.Value;
             u.Username = txtUsername.Text;
-
+            double imc = 0;
+            if (IMCUsuarioTxt.Text.Equals(string.Empty)) u.IMC = 25;
+            if (double.TryParse(IMCUsuarioTxt.Text, out imc)) u.IMC = imc;
+            
             if (Sistema.GetSistema().AgregarUsuario(u))
             {
                 MessageBox.Show("Se agregó el usuario " + txtUsername.Text);

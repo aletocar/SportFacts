@@ -17,6 +17,7 @@ namespace Entidades
         public string Username { get; set; }
         public string Mail { get; set; }
         public DateTime FechaNac { get; set; }
+        public double IMC { get; set; }
         public string Password { get; set; }
         public Tipo tipo { get; set; }
         public List<Tuple<PlanDietareo, PrioridadPlan>> ListaPlan { get; set; }
