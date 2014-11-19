@@ -10,13 +10,27 @@ namespace Entidades
 {
     public class Usuario
     {
+        public enum Tipo { Medico, Tecnico, Deportista }
+        public enum PrioridadPlan { Principal, Secundario }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Username { get; set; }
         public string Mail { get; set; }
         public DateTime FechaNac { get; set; }
         public string Password { get; set; }
+        public Tipo tipo { get; set; }
+        public List<Tuple<PlanDietareo, PrioridadPlan>> ListaPlan { get; set; }
 
-        public Usuario() { }
+        public Usuario() 
+        { 
+            ListaPlan = new List<Tuple<PlanDietareo, PrioridadPlan>>();
+        }
+
+        public override bool Equals(object obj)
+        {
+            Usuario u = obj as Usuario;
+            return this.Username.Equals(u.Username);
+        }
+
     }
 }

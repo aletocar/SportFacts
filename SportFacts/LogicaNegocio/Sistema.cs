@@ -7,7 +7,7 @@ using Entidades;
 
 namespace LogicaNegocio
 {
-    public class Sistema : ISistema
+    public class Sistema
     {
         private static Sistema sistema;
 
@@ -45,17 +45,21 @@ namespace LogicaNegocio
 
         public void AgregarPlan(PlanDietareo p)
         {
-            throw new NotImplementedException();
+            PlanesDietareaos.Add(p);
         }
 
         public void BorrarPlan(PlanDietareo p)
         {
-            throw new NotImplementedException();
+            PlanesDietareaos.Remove(p);
         }
 
         public bool ExistePlanConNombre(string nombre)
         {
-            throw new NotImplementedException();
+            foreach (PlanDietareo p in PlanesDietareaos)
+            {
+                if (p.NombrePlan.Equals(nombre)) return true;
+            }
+            return false;
         }
 
         public void AgregarAlimento(Alimento a)
@@ -114,6 +118,24 @@ namespace LogicaNegocio
                 if (p.identificador.Equals(id)) ret.Add(p);
             }
             return ret;
+        }
+
+        public bool PlanNoSirveParaDeportista(Usuario usuario, PlanDietareo planDietareo)
+        {
+            return true;
+        }
+
+        public Usuario[] ObtenerDeportistas(string nombre, string apellido)
+        {
+            List<Usuario> ret = new List<Usuario>();
+            foreach (Usuario u in Usuarios)
+            {
+                if (u.tipo == Usuario.Tipo.Deportista)
+                {
+                    if (u.Nombre == nombre || u.Apellido == apellido) ret.Add(u);
+                }
+            }
+            return ret.ToArray();
         }
     }
 }

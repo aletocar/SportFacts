@@ -59,7 +59,9 @@ namespace SportFacts
         {
             //Chequea que existe el usuario y log in
             Usuario u = new Usuario();
-            if (rBtnDeportista.Checked) u = new Deportista();
+            if (rBtnDeportista.Checked) u.tipo = Usuario.Tipo.Deportista;
+            else if (rBtnMedico.Checked) u.tipo = Usuario.Tipo.Medico;
+            else u.tipo = Usuario.Tipo.Tecnico;
             u.Apellido = txtApellido.Text;
             u.Nombre = txtNombre.Text;
             u.Mail = txtMail.Text;
@@ -78,6 +80,7 @@ namespace SportFacts
 
 
             panelAgregarUsuario.Visible = false;
+            panelInicio.Visible = true;
 
         }
 
@@ -310,12 +313,15 @@ namespace SportFacts
             else
             {
                 Sistema.GetSistema().Logear(textBox1.Text);
+                panelInicio.Visible = false;
+                panelPlan.Visible = true;
             }
         }
 
         private void btnBuscarPlan_Click(object sender, EventArgs e)
         {
            listaPlanes.Items.AddRange(Sistema.GetSistema().ObtenerPlanes(IdentificadorBuscarTXT.Text).ToArray());
+           if (listaPlanes.Items.Count == 0) MessageBox.Show("No se encontraron planes con esos datos");
         }
 
         private void listaPlanes_SelectedIndexChanged(object sender, EventArgs e)
@@ -354,6 +360,7 @@ namespace SportFacts
                 if (MessageBox.Show("Esta seguro que desea borrar?", "Borrar Plan", MessageBoxButtons.YesNo).Equals(DialogResult.Yes))
                 {
                     panelBorrarPlan.Visible = false;
+                    listaPlanes.Items.Clear();
                     PlanDietareo p = (PlanDietareo)listaPlanes.SelectedItem;
                     Sistema.GetSistema().PlanesDietareaos.Remove(p);
                 }
@@ -362,6 +369,71 @@ namespace SportFacts
             {
                 MessageBox.Show("Seleccione un plan a borrar");
             }
+        }
+
+        private void btnCancelarBorrarPlan_Click(object sender, EventArgs e)
+        {
+            panelBorrarPlan.Visible = false;
+            listaPlanes.Items.Clear();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            panelAgregarPlanDietareo.Visible = false;
+            lbxIngestas.Items.Clear();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panelAsignarPlan.Visible = false;
+            deportistasLbx.Items.Clear();
+            PlanesAsignadosLbx.Items.Clear();
+            PlanesLbx.Items.Clear();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            deportistasLbx.Items.AddRange(Sistema.GetSistema().ObtenerDeportistas(nombreDeportistaTxt.Text, apellidoDeportistaTxt.Text));
+            if (deportistasLbx.Items.Count == 0) MessageBox.Show("No hay deportistas que cumplan con esos datos");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (deportistasLbx.SelectedItem == null)
+            {
+
+            }
+            else if (PlanesLbx.SelectedItem == null)
+            {
+
+            }
+            else if (Sistema.GetSistema().PlanNoSirveParaDeportista((Usuario)deportistasLbx.SelectedItem, (PlanDietareo)PlanesLbx.SelectedItem))
+            {
+
+            }
+            else
+            {
+                Usuario.PrioridadPlan prio = Usuario.PrioridadPlan.Principal;
+                if (rbtnSecundario.Checked) prio = Usuario.PrioridadPlan.Secundario;
+                Tuple<PlanDietareo, Usuario.PrioridadPlan> tupla = new Tuple<PlanDietareo, Usuario.PrioridadPlan>((PlanDietareo)PlanesLbx.SelectedItem, prio);
+                ((Usuario)deportistasLbx.SelectedItem).ListaPlan.Add(tupla);
+            }
+        }
+
+        private void deportistasLbx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Usuario u = (Usuario)deportistasLbx.SelectedItem;
+            nombreDeportistaTxt.Text = u.Nombre;
+            apellidoDeportistaTxt.Text = u.Apellido;
+            usuarioDeportistaTxt.Text = u.Username;
+            mailDeportistaTxt.Text = u.Mail;
+            fechaNacDeportistaDtp.Value = u.FechaNac;
+            //PlanesAsignadosLbx.Items.AddRange(u.ListaPlan);
+        }
+
+        private void btnAsignarPlan_Click(object sender, EventArgs e)
+        {
+            panelAsignarPlan.Visible = true;
         }
     }
 }
