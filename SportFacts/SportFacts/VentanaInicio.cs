@@ -127,7 +127,6 @@ namespace SportFacts
             {
                 Ingesta i = (Ingesta)lbxIngestas.SelectedItem;
                 p.Ingestas.Add(new Tuple<Ingesta, PlanDietareo.DiaDeSemana, PlanDietareo.MomentoDelDia>(i, (PlanDietareo.DiaDeSemana)cbxDia.SelectedValue, (PlanDietareo.MomentoDelDia)cbxMomento.SelectedValue));
-                Sistema.GetSistema().ModificarPlan(p);
                 lbxIngestas.Items.Remove(i);
                 cbxDia.SelectedValue = null;
                 cbxMomento.SelectedValue = null;
@@ -196,14 +195,14 @@ namespace SportFacts
                 p.Categoria = (PlanDietareo.CategoriaPlan)cbxCategoria.SelectedValue;
                 p.Frecuencia = (PlanDietareo.FrecuenciaPlan)cbxFrecuencia.SelectedValue;
                 p.Generico = ckbGenerico.Checked;
-
-                Sistema.GetSistema().ModificarPlan(p);
                 InicializarPlan();
             }
         }
 
         private void InicializarPlan()
         {
+            p = new PlanDietareo() { identificador = Sistema.GetSistema().ObtenerNombrePlan() };
+            idTxt.Text = p.identificador;
             label10.Enabled = true;
             label11.Enabled = true;
             label12.Enabled = true;
@@ -297,6 +296,72 @@ namespace SportFacts
 
             btnCrearPlan.Enabled = true;
 
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            if(!Sistema.GetSistema().ExisteUsuario(textBox1.Text)){
+                MessageBox.Show("No existe un usuario " + textBox1.Text);
+            }
+            else if (!Sistema.GetSistema().ContrasenaDeUsuarioCorrecta(textBox1.Text, textBox2.Text))
+            {
+                MessageBox.Show("La contraseña del usuario " + textBox1.Text + " es incorrecta");
+            }
+            else
+            {
+                Sistema.GetSistema().Logear(textBox1.Text);
+            }
+        }
+
+        private void btnBuscarPlan_Click(object sender, EventArgs e)
+        {
+           listaPlanes.Items.AddRange(Sistema.GetSistema().ObtenerPlanes(IdentificadorBuscarTXT.Text).ToArray());
+        }
+
+        private void listaPlanes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PlanDietareo p = (PlanDietareo)listaPlanes.SelectedItem;
+            nombrePlanBuscarTxt.Text = p.NombrePlan;
+            objetivoPlanBuscarTxt.Text = p.Objetivo;
+            edadMinimaBuscarTxt.Text = p.EdadMin.ToString();
+            edadMaximaBuscarTxt.Text = p.EdadMax.ToString();
+            ImcMinBuscarTxt.Text = p.IMCMin.ToString();
+            imcMaxBuscarTXT.Text = p.IMCMax.ToString();
+            if (p.Duracion != null)
+            {
+                int dias = p.Duracion.Days;
+                int meses = (dias - (dias % 30)) / 30;
+                dias = dias % 30;
+                int semanas = (dias - (dias % 7)) / 7;
+                dias = dias % 7;
+                diasBuscarTxt.Text = dias.ToString();
+                mesesBuscarTxt.Text = meses.ToString();
+                semanasBuscarTxt.Text = semanas.ToString();
+                duracionBuscarTxt.Checked = true;
+            }
+            else
+            {
+                duracionBuscarTxt.Checked = true;
+            }
+            categoriasBuscarCbbx.Items.Add(p.Categoria);
+            genericoBuscarCbx.Checked = p.Generico;
+        }
+
+        private void btnConfirmarBorrarPlan_Click(object sender, EventArgs e)
+        {
+            if (listaPlanes.SelectedItem != null)
+            {
+                if (MessageBox.Show("Esta seguro que desea borrar?", "Borrar Plan", MessageBoxButtons.YesNo).Equals(DialogResult.Yes))
+                {
+                    panelBorrarPlan.Visible = false;
+                    PlanDietareo p = (PlanDietareo)listaPlanes.SelectedItem;
+                    Sistema.GetSistema().PlanesDietareaos.Remove(p);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un plan a borrar");
+            }
         }
     }
 }

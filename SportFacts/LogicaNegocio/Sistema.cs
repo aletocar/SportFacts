@@ -16,6 +16,7 @@ namespace LogicaNegocio
         public List<Alimento> Alimentos { get; set; }
         public List<Usuario> Usuarios { get; set; }
         public List<PlanDietareo> PlanesDietareaos { get; set; }
+        public Usuario usuarioIngresado { get; set; }
 
         private Sistema()
         {
@@ -34,12 +35,7 @@ namespace LogicaNegocio
 
         public void AgregarIngesta(Ingesta i)
         {
-            throw new NotImplementedException();
-        }
-
-        public void ModificarIngesta(Ingesta i)
-        {
-            throw new NotImplementedException();
+            Ingestas.Add(i);
         }
 
         public void BorrarIngesta(Ingesta i)
@@ -48,11 +44,6 @@ namespace LogicaNegocio
         }
 
         public void AgregarPlan(PlanDietareo p)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ModificarPlan(PlanDietareo p)
         {
             throw new NotImplementedException();
         }
@@ -75,7 +66,54 @@ namespace LogicaNegocio
 
         public bool AgregarUsuario(Usuario u)
         {
-            throw new NotImplementedException();
+            if (Usuarios.Contains(u)) 
+                return false;
+            else
+            {
+                Usuarios.Add(u);
+                return true;
+            }
+
+        }
+
+        public bool ExisteUsuario(string user)
+        {
+            Usuario u = new Usuario() { Username = user };
+            return Usuarios.Contains(u);
+        }
+
+        public bool ContrasenaDeUsuarioCorrecta(string user, string pass)
+        {
+            Usuario u = new Usuario() { Username = user };
+            u = Usuarios.ElementAt(Usuarios.IndexOf(u));
+            return u.Password.Equals(pass);
+        }
+
+        public void Logear(string user)
+        {
+            Usuario u = new Usuario() { Username = user };
+            usuarioIngresado = Usuarios.ElementAt(Usuarios.IndexOf(u));
+        }
+
+        public string ObtenerNombrePlan()
+        {
+            int max = 0;
+            foreach (PlanDietareo p in PlanesDietareaos)
+            {
+                if (int.Parse(p.identificador.Substring(3)) > max) max = int.Parse(p.identificador.Substring(3));
+            }
+            max++;
+            return "PD-" + max;
+        }
+
+        public List<PlanDietareo> ObtenerPlanes(string id)
+        {
+            List<PlanDietareo> ret = new List<PlanDietareo>();
+            foreach (PlanDietareo p in PlanesDietareaos)
+            {
+                if (p.identificador.Equals(id)) ret.Add(p);
+            }
+            return ret;
         }
     }
 }

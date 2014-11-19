@@ -16,6 +16,7 @@ namespace Entidades
         public enum DiaDeSemana {Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo } 
         public enum MomentoDelDia {mañana, media_mañana, almuerzo, media_tarde, tarde, noche }
         public enum FrecuenciaPlan { diaria, semanal, quincenal, mensual }
+        public string identificador { get; set; }
         public string NombrePlan { get; set; }
         public string Objetivo { get; set; }
         public CategoriaPlan Categoria { get; set; }
