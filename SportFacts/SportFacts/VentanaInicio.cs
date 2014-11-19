@@ -350,7 +350,7 @@ namespace SportFacts
 
         private void btnBuscarPlan_Click(object sender, EventArgs e)
         {
-           listaPlanes.Items.AddRange(Sistema.GetSistema().ObtenerPlanes(IdentificadorBuscarTXT.Text).ToArray());
+           listaPlanes.Items.AddRange(Sistema.GetSistema().ObtenerPlanes(IdentificadorBuscarTXT.Text, objetivoPlanBuscarTxt.Text, nombrePlanBuscarTxt.Text).ToArray());
            if (listaPlanes.Items.Count == 0) MessageBox.Show("No se encontraron planes con esos datos");
         }
 
