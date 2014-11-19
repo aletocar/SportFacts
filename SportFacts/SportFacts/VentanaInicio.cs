@@ -394,7 +394,7 @@ namespace SportFacts
                 {
                     panelBorrarPlan.Visible = false;
                     PlanDietareo p = (PlanDietareo)listaPlanes.SelectedItem;
-                    Sistema.GetSistema().PlanesDietareaos.Remove(p);
+                    Sistema.GetSistema().BorrarPlan(p);
                     listaPlanes.Items.Clear();
                 }
             }

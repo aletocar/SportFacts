@@ -51,6 +51,13 @@ namespace LogicaNegocio
         public void BorrarPlan(PlanDietareo p)
         {
             PlanesDietareaos.Remove(p);
+            foreach (Usuario u in Usuarios)
+            {
+                for (int i = u.ListaPlan.Count - 1; i >= 0; i--)
+                {
+                    if (u.ListaPlan.ElementAt(i).Item1.Equals(p)) u.ListaPlan.RemoveAt(i);
+                }
+            }
         }
 
         public bool ExistePlanConNombre(string nombre)
